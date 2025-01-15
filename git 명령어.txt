@@ -1,0 +1,13 @@
+study문서 접속 - 우클릭 - 추가옵션 - open git bash
+
+git add  .
+git commit  -m  "간단한설명"
+git push origin  main
+
+
+--원격주소 확인
+git remote -v
+
+
+
+https://special-rainstorm-825.notion.site/_GIT-bd66b21f93074d429e5a81a5479e5092
