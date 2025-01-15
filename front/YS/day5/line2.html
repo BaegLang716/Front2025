@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>line2</title>
+
+        <style>
+            .wrap{
+                width: 750px;
+                border: 1px solid black;
+            }
+
+            .wrap > div{
+                border: 1px solid red;
+                height: 200px;
+            }
+
+            .line2{
+                display: flex;
+                text-align: center;
+            }
+
+            .line2_col1{
+                width: 50%;
+                height: 200px;
+                border: 1px solid black;
+            }
+
+            /*
+            .line2_col1 img{
+                width: 100%;
+                height: 100%;
+
+                object-fit: contain;    여백이 남더라도 자기 비율을 유지하는 형태
+                object-fit: cover;      틀에 맞춰서 이미지를 끼워넣는 형태로 이미지가 짤릴 수 있음 / img태그만 단독으로 사용된다면 무시됨됨
+            }
+            */
+
+            .line2_col1 img{
+                width: 200px;
+                height: 130px;
+            }
+
+            .line2_col2{
+                width: 50%;
+                height: 200px;
+                border: 1px solid black;
+            }
+
+            .line2_col2 textarea{
+                width: 100%;
+                height: 130px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="line2">
+                <!--이미지칸-->
+                <div class="line2_col1">
+                    <h4>이미지</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHeT4xVAryakAxB9vHTpluNWAZTn7On3SoXw&s">
+                </div>
+                <!--내용칸-->
+                <div class="line2_col2">
+                    <h4>맛 평가</h4>
+                    <textarea></textarea>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

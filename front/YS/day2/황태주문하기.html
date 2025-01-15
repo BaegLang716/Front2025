@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>황태주문하기</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+        <style>
+
+            *{
+                font-family: 'Nanum pen Script', cursive;
+            }
+
+            .order{
+                width: 500px;
+                padding: 20px ;
+                border: 0.5px solid rgb(201, 201, 201);
+                margin: 0 auto;
+
+                /* height: 800px; /* 제거할 것 */
+            }
+
+            .goods_info{
+                width: 80%;
+                /* height: 300px; /* 제거할 것 */
+                /* border: 1px solid black; */
+                margin: 0 auto;
+            }
+
+            /* 이미지영역 채우기 */
+            .goods_img{
+                width: 250px;
+                height: 250px;
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbofUHpbLjvj56JQfhuD1gKL2_MRN-6AA3ow&s);
+                background-position: center;
+                background-size: cover;
+                /* background-color: blue; */
+                margin: 0 auto;
+                
+            }
+
+            .order_info{
+                width: 85%;
+                /* height: 500px; /* 제거할 것 */
+                /* border: 1px solid black; */
+                margin: 0 auto;
+            }
+
+            .order_info > div{
+                padding-bottom: 10px;
+                /* border: 1px solid black; */
+            }
+
+            input[type=text] {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            select{
+                width: 100%;
+                padding: 10px;
+            }
+
+            input[type=tel] {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            .order_btn{
+                width: 100%;
+                padding: 10px;
+                border: 0px;
+                border-radius: 10px;
+                margin-top: 10px;
+                background-color: skyblue;
+                font-size: 24px;
+            }
+
+            .price_info{
+                font-size: 24px;
+                font-weight: bold;
+                color: blue;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <!--전체영역-->
+        <div class="order">
+            <!--상품정보 영역-->
+            <div class="goods_info">
+                <!--상품 이미지-->
+                <div class="goods_img"></div>
+                <!--이미지 정보-->
+                <div class="img_info">
+                    <h1>대관령 황태</h1>
+                    <p>겨울 내내 녹았다 얼었다를 반복한 맛 좋은 대관령 황태입니다.</p>
+                    <p>가격 :<span class="price_info">30000원/10마리</span></p>
+                </div>
+            </div>
+            <!--주문정보 영역-->
+            <div class="order_info">
+                
+                    <div> --주문내역-- </div>
+
+                    <div> 주문자이름 <input type="text"></div>
+                    
+
+                    <div> 수량
+                        <select>
+                            <option>수량을 선택하세요</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+
+                    <div> 주문금액 <input type="text"></div>
+
+                    <div> 전화번호 <input type="tel"></div>
+
+                    <button class="order_btn">order</button>
+                
+
+
+            </div>
+        </div>
+
+    </body>
+</html>

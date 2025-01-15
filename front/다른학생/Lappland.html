@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<need>
+    <meta charaset="UFT-8">
+    <meta name="viewport" content="width=device-eidth, initel-scale=1. 0">
+    <title>Lappland</title>
+</need>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo&display=swap'); /* 글꼴 */
+
+    html /* 전체 서식 */
+    {
+        /* 문서 크기 */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        background-color: rgb(50, 50, 50); /* 배경색 */
+
+        font-family: "Nanum Gothic", sans-serif; /* 글꼴 적용 */
+        color: white; /* 글자색 */
+    }
+
+    table /* 표 서식 */
+    {
+        width: 80%;
+        border-collapse: collapse;
+
+        margin: 0 auto;
+
+        font-family: "Nanum Myeongjo", serif;
+    }
+    .tb1
+    {
+        table-layout: fixed;
+    }
+    td /* 셀 전체 서식 */
+    {
+        padding: 10px;
+
+        border: 1px solid rgb(50, 50, 50);
+    }
+    .sc1, .sc2 /* 셀 서식 1, 2 */
+    {
+        text-align: center;
+        white-space: nowrap;
+    }
+    .sc2, .sc3 /* 셀 서식 1, 2 */
+    {
+        text-align: center;
+    }
+    .sc1 /* 셀 서식 1 */
+    {
+        background-color: rgb(50, 50, 50);
+
+        font-weight: bold;
+    }
+    .sc3 /* 셀 서식 3 */
+    {
+        text-align: left;
+    }
+
+
+    /* 헤더 */
+    header
+    {
+        display: flex;
+        z-index: 999;
+
+        width: 100%;
+        height: 60px;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        background-color: black;
+    }
+
+    /* 제목 */
+    .title
+    {
+        display: flex;
+
+        width: 400px;
+        height: 100%;
+
+        text-align: center;
+    }
+    .title > img /* 진영 이미지 */
+    {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* 메뉴 */
+    header > button
+    {
+        width: 100px;
+        height: 100%;
+
+        border: none;
+        background-color: black;
+        
+        font-family: "Nanum Gothic", sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+    header > button:hover /* 마우스 오버 */
+    {
+        color: rgb(200, 200, 200);
+    }
+    header > button:focus /* 마우스 클릭 */
+    {
+        background-color: rgb(50, 50, 50);
+        color: rgb(200, 200, 200);
+    }
+
+
+
+    /* 전체 단락 서식 */
+    .info, .game, .profile, .voice
+    {
+        width: 1000px;
+        box-sizing: border-box;
+
+        margin: 0 auto;
+
+        border: 1px solid black;
+        background-color: black;
+    }
+
+
+
+    /* 정보 */
+    /* 일러스트 */
+    .Illust
+    {
+        position: relative;
+        display: flex;
+
+        height: 600px;
+        margin-top: 80px;
+
+        background-color: white;
+    }
+    .Illust_item
+    {
+        width: 33.3%;
+        
+        background-size: cover;
+        background-position: center;
+    }
+    .Illust_item1 /* 기본 */
+    {
+        background-image: url(https://raw.githubusercontent.com/Aceship/Arknight-Images/main/characters/char_140_whitew_1.png);
+    }
+    .Illust_item2 /* 2정 */
+    {
+        background-image: url(https://raw.githubusercontent.com/Aceship/Arknight-Images/main/characters/char_140_whitew_2.png);
+    }
+    .Illust_item3 /* 스킨 */
+    {
+        background-image: url(https://raw.githubusercontent.com/Aceship/Arknight-Images/main/characters/char_140_whitew_boc%231.png);
+    }
+    .Illust > button /* 출처 */
+    {
+        position: absolute;
+
+        background-color: transparent;
+        border: none;
+
+        bottom: 10px;
+        right: 10px;
+
+        font-family: "Nanum Gothic", sans-serif;
+        font-size: 10px;
+        color: black;
+    }
+    
+    .intro /* 소개문 */
+    {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
+    /* 인게임 */
+    .game
+    {
+        position: relative;
+    }
+
+    /* 직군 마크 */
+    .game > button
+    {
+        position: absolute;
+
+        width: 50px;
+        height: 50px;
+
+        right: 20px;
+
+        border: none;
+        background-size: cover;
+        background-position: center;
+    }
+    .guard /* 가드 마크 */
+    {
+        top: 20px;
+
+        background-image: url(https://i.namu.wiki/i/6sJ2M52pVZkz_pKBprxHfll5QSQRCstoVoT1w9pdiaXlbBv0_rHBwRGrJI9_Xx1MavosCMg56BpTasGLaCUFyXAmqG7Khj37sGmKJGyvZFeKjBzTZ7U03OAQp3FmJMhCtmgHYrPneVxB5yCmqbz5Yw.webp);
+    }
+    .lord /* 로드 마크 */
+    {
+        top: 70px;
+
+        background-color: black;
+        background-image: url(https://i.namu.wiki/i/HWSp5vlZXv6J8OKkUIKWWyHHcdpaMJrlAJu3J3N1nx7iRUWz1IIBqTyCyIXQAx6-ir8CbXiX8_oJazjmuqcJhw.webp);
+    }
+
+    .sk1, .sk2 /*스킬 마크 */
+    {
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+    }
+    .sk1 /* 1스 마크 */
+    {
+        background-image: url(https://i.namu.wiki/i/sw9JoIvNmNIYYO1TE9juAPIflK1S35_CXxAkhiz0j3oxGeZRahZ3DJ-tEBOpP44Sg3TbfCiBYBSiUbEDhCiFyPsflB-tM2TLW4cZp9IyYLwOYMBcXUzREHeRFNvAuPPYY0_guSBjMF2pDsfH1kQCdA.webp);
+    }
+    .sk2 /* 2스 마크 */
+    {
+        background-image: url(https://i.namu.wiki/i/pIevOl4mxsW04Cj353bbvkw32j2mLl0engorotqU1dpTQwVok6vWDhyrLLf3zPqE_39O6CZ8YkwpC1FRWMu0YtuJoNANhfTPKEURvUIseOm7VQKmU7n4EMIhr4dw2qeTtT-6C8IURDH_MQXMoZGyyg.webp);
+    }
+
+    .mdn1, .mdn2, .mdx /* 모듈 이미지 */
+    {
+        font-weight: bold;
+        text-align: center;
+    }
+    .mdn1 /* 기본 모듈 */
+    {
+        background-color: rgb(25, 25, 25);
+    }
+    .mdn2 /* 기본 모듈 */
+    {
+        height: 120px;
+
+        background-image: url(https://i.namu.wiki/i/6vXwLTh-yzzxD3eKUUidqQaq0ivR9cenVsxIzFTfzQAWKm0jAC9ncOu3vstv7mJgHo_HV5ZIF3muL_xXXwADlKETNoi2TQpTW7-3VsFEPUD8I5ZkiS3-HhUWElq5DMtips_GC2WzjIhYBFjcMKWHaw.webp);
+        background-size: cover;
+        background-position: center;
+    }
+    .mdx /* X모듈 */
+    {
+        background-color: red;
+    }
+    .mdn1, .mdx > img
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+
+
+    /* 파일, 대사 */
+    .profile, .voice
+    {
+        margin-top: 20px;
+    }
+    .profile > div /* 섹션 */
+    {
+        width: 80%;
+
+        margin: 0 auto;
+    }
+    .profile > div > h3 /* 제목 */
+    {
+        text-align: center;
+    }
+
+    .identity /* 신원 */
+    {
+        display: flex;
+    }
+    .identity > table
+    {
+        width: 45%;
+    }
+    .mdximg /* 모듈 이미지 */
+    {
+        width: 800px;
+        height: 800px;
+    }
+
+
+
+    /* 푸터 */
+    footer
+    {
+        width: 100%;
+        height: 60px;
+
+        top: 0;
+        left: 0;
+
+        background-color: rgb(25, 25, 25);
+
+        text-align: center;
+        line-height: 60px;
+    }
+
+</style>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <!-- 제목 -->
+        <div class="title">
+            <img src="https://i.namu.wiki/i/R1E0Il8sNyvgL7pkvwjrG4wuG1MJCRwUEFS3SEx-QtZ3lmBkns3JPvFK3kV3O-AgoPa6Q1iFmTYSCUjKXJnVahCK9W6vXJoanI1AH4-SbCGw-RprvNptMHaqcc01zW0WFr1H7f0JyVBhyF8PYVO4TQ.webp">
+            <h2>라플란드</h2><h4>Lappland/ラップランド/拉普兰德</h4>
+        </div>
+        <!-- 메뉴 -->
+        <button class="infobtn" tabindex="0">INFO</button>
+        <button class="gamebtn" tabindex="0">GAME</button>
+        <button class="profilebtn" tabindex="0">PROFILE</button>
+        <button class="voicebtn" tabindex="0">VOICE</button>
+    </header>
+
+    <!-- 정보 -->
+    <!-- 일러스트 -->
+    <div class="Illust info">
+        <div class="Illust_item1 Illust_item"> <!-- 기본 --> </div> <hr>
+        <div class="Illust_item2 Illust_item"> <!-- 2정 --> </div> <hr>
+        <div class="Illust_item3 Illust_item"> <!-- 스킨 --> </div>
+        <button>
+            일러스트 · 幻象黑兔 / 성우 JP 이마이 아사미 · KR 서유리 · EN 크리스티나 코월처크 · CN 진언역 · IT 엘리사 콘테스타빌레
+        </button>
+    </div>
+    <!-- 소개문 -->
+    <div class="intro info">
+        <p>
+            <span style="display: block; text-align: center;">【██기록에서 발췌】</span>
+            <br>
+            상호교환이야말로 정보를 얻는 효율적인 방법이라는 걸 이해하도록 해.
+            레드에 대한 '정보'와 교환해줄 만한 게……
+            아, 꽤 재밌어보이는 게 나왔는걸ㅡ 라플란드의 기록이야.
+            <br><br>
+            <span style="display: block; text-align: center; font-style: italic;">
+                “저 붉은 그림자는…… 나를 잡으러 온 건가. 
+                되레 자신이 죽을 거라는 생각은 안 해봤나……! 흥, 어차피 나도 붙어보고 싶은 놈이었으니까. 
+                이쪽에서 먼저 공격해주지!”
+                <br><br>
+                코드네임 라플란드<br>
+                이름 ████████<br>
+                종족 루포<br>
+                출신 시라쿠사<br>
+                아츠 발현됨<br>
+                직군 가드
+            </span><br>
+            <span style="display: block; text-align: center;">[임상기록]</span><br>
+            방사선 검사 결과, 해당 대원은 체내 장기의 윤곽이 흐릿하고, 비정상적 음영이 관찰되며, 순환계에서 광석 입자가 검출되었고, 광석병 감염 증상을 보이므로 현재……
+            <br><br>
+            <span style="display: block; text-align: center;">사건 혐의</span>
+            <br>
+            혐의가 사실일 경우, 라플란드는 이하 사건들의 범인입니다.<br>
+            <br>
+            ██족 연쇄 살인 사건.<br>
+            ███년 ██가문 구성원을 납치 및 ██하고, 같은 해 ████와 ██족의 파벌 싸움에 가담해 양측 구성원을 기습했다는 혐의로 기소됐으나 최종적으로 무죄 판결을 받았습니다.
+            <br><br>
+            ██시 ████실종사건<br>
+            ███년 발생한 미제 사건입니다. 
+            실종자 ███은 숲 속에서 발견됐습니다. 
+            용의자와 실종자 둘 다 어느 유력 가문의 일원이라는 소문이 있으며, 실종자는 당시 가주였습니다.
+            <br><br>
+            용문에서 세 건의 차량 절도 및 납치<br>
+            용문 법률에 의거해 사건이 접수됐습니다. 11월 17일 저녁 두 파벌이 교전을 벌이는 와중, 차량을 절도하고 세 명의 검시관을 납치한 혐의로 수사 중입니다.
+        </p>
+    </div>
+
+
+
+    <!-- 인게임 -->
+    <div class="game">
+        <!-- 성급 표시 -->
+        <span style="display: block; text-align: center;"><h1>★★★★★</h1></span>
+
+        <!-- 직군 아이콘 -->
+        <button class="guard"> <!-- 가드 아이콘 --> </button>
+        <button class="lord"> <!-- 로드 아이콘 --> </button>
+
+        <!-- 태그 -->
+        <table class="tb1">
+            <caption><h3>태그</h3></caption>
+            <tr>
+                <td class="sc1" colspan="2">근거리</td>
+            </tr>
+            <tr>
+                <td class="sc1">딜러</td>
+                <td class="sc1">디버프</td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- 스탯 -->
+        <table class="tb1">
+            <caption><h3>스탯</h3></caption>
+            <tr>
+                <td class="sc1">항목</td>
+                <td class="sc1">수치</td>
+            </tr>
+            <tr>
+                <td class="sc2">최대 체력</td>
+                <td class="sc3">2350</td>
+            </tr>
+            <tr>
+                <td class="sc2">공격</td>
+                <td class="sc3">685(+75)</td>
+            </tr>
+            <tr>
+                <td class="sc2">방어</td>
+                <td class="sc3">365</td>
+            </tr>
+            <tr>
+                <td class="sc2">마법 저항</td>
+                <td class="sc3">15</td>
+            </tr>
+            </tr>
+            <tr>
+                <td class="sc2">재배치</td>
+                <td class="sc3">느림(70초)</td>
+            </tr>
+            <tr>
+                <td class="sc2">배치 코스트</td>
+                <td class="sc3">19</td>
+            </tr>
+            <tr>
+                <td class="sc2">저지 가능 수</td>
+                <td class="sc3">2</td>
+            </tr>
+            <tr>
+                <td class="sc2">공격 속도</td>
+                <td class="sc3">다소 느림(1.3초)</td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- 잠재능력 -->
+        <table class="tb1">
+            <caption><h3>잠재능력</h3></caption>
+            <tr>
+                <td class="sc1">1</td>
+                <td class="sc1">2</td>
+                <td class="sc1">3</td>
+                <td class="sc1">4</td>
+                <td class="sc1">5</td>
+                <td class="sc1">6</td>
+            </tr>
+            <tr>
+                <td class="sc2">-</td>
+                <td class="sc2">배치 코스트 -1</td>
+                <td class="sc2">재배치 시간 -4초</td>
+                <td class="sc2">공격력 +25</td>
+                <td class="sc2">재능 강화(+1초)</td>
+                <td class="sc2">배치 코스트 -1</td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- 공격 범위 -->
+        <table class="tb1">
+            <caption><h3>공격 범위</h3></caption>
+            <tr>
+                <td class="sc1">초기</td>
+                <td class="sc1">1차 정예화</td>
+                <td class="sc1">2차 정예화</td>
+            </tr>
+            <tr>
+                <td class="sc3">
+                    □□<br>
+                    ■□□<br>
+                    □□
+                </td>
+                <td class="sc3">
+                    □□<br>
+                    ■□□□<br>
+                    □□
+                </td>
+                <td class="sc3">
+                    □□<br>
+                    ■□□□<br>
+                    □□
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- 재능 -->
+        <table>
+            <caption><h3>재능</h3></caption>
+            <tr>
+                <td class="sc1">재능</td>
+                <td class="sc1">개방/강화 조건</td>
+                <td class="sc1">효과</td>
+            </tr>
+            <tr>
+                <td class="sc2" rowspan="2">정신 파괴</td>
+                <td class="sc2">1차 정예화</td>
+                <td class="sc3">공격 시 적의 특수 능력 1초간 무효화</td>
+            </tr>
+            <tr>
+                <td class="sc2">2차 정예화</td>
+                <td class="sc3">공격 시 적의 특수 능력 5초간 무효화</td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- 스킬 -->
+        <table class="tb1">
+            <caption><h3>스킬</h3></caption>
+            <tr>
+                <td class="sc1" colspan="2">1스킬</td>
+            </tr>
+            <tr>
+                <td class="sk1"><!-- 스킬 이미지 --></td>
+                <td class="sc2">해시계</td>
+            </tr>
+            <tr>
+                <td class="sc2" style="background-color: orangered;">공격 회복</td>
+                <td class="sc2">자동 발동</td>
+            </tr>
+            <tr>
+                <td class="sc3" colspan="2">
+                    <span style="background-color: white; color: black;">초기 SP - </span><span style="background-color: rgb(150, 150, 150); color: black;">소모 기력 30 </span><span style="background-color: rgb(50, 50, 50);">지속 시간 - </span><br>
+                    공격력 +70%, 40% 확률로 물리 대미지 무효화<br>
+                    <span style="color: aqua";>무한 지속</span><br>
+                </td>
+            </tr>
+            <tr>
+                <td class="sc1" colspan="2">2스킬</td>
+            </tr>
+            <tr>
+                <td class="sk2"><!-- 스킬 이미지 --></td>
+                <td class="sc2">늑대의 혼</td>
+            </tr>
+            <tr>
+                <td class="sc2" style="background-color: orangered;">공격 회복</td>
+                <td class="sc2">자동 발동</td>
+            </tr>
+            <tr>
+                <td class="sc3" colspan="2">
+                    <span style="background-color: white; color: black;">초기 SP - </span><span style="background-color: rgb(150, 150, 150); color: black;">소모 기력 17 </span><span style="background-color: rgb(50, 50, 50);">지속 시간 20초 </span><br>
+                    공격력 +120%, 대미지 유형이 마법 대미지로 변경, 적 1명 추가 공격, 원거리 공격의 공격력이 감소하지 않음
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- 모듈 -->
+        <table>
+            <caption><h3>모듈</h3></caption>
+            <tr>
+                <td class="mdn1" colspan="2">
+                    <img src="https://i.namu.wiki/i/24lkfOqyQOw2nXrmsT3U8ALLu67mvRe7XyW5BqWouhDwv9Q3TB9SjacRRqt6zUiDOFVmU4MPXjV8KVnulMIhfQ.webp"><br>
+                    ORIGINAL
+                </td>
+                <td class="sc2">라플란드의 배지</td>
+            </tr>
+            <tr>
+                <td class="sc1" colspan="2">이미지</td>
+                <td class="sc1">기본 정보</td>
+            </tr>
+            <tr>
+                <td class="mdn2" colspan="2"><!-- 이미지 --></td>
+                <td class="sc3">오퍼레이터 라플란드는 비교적 넓은 범위 내의 적을 저격하는 데 능하므로, 
+                    외근 부서의 결정에 따라 외근 임무에서는 가드 오퍼레이터로 구분되며, 로드 직책을 행사한다. 
+                    이에 따라 특별히 본 배지를 수여한다.</td>
+            </tr>
+            <tr>
+                <td class="mdx" colspan="2">
+                    <img src="https://i.namu.wiki/i/iyxkIY782UNpt9RxKTxti27cI_kZBfVRfukB8flai_D8yJIe9DGxW2Lu3_mkrgftVXz2dIgYdCc2iqhYLUvErQ.webp"><br>
+                    LOR-X
+                </td>
+                <td class="sc2">'어린 송곳니'</td>
+            </tr>
+            <tr>
+                <td class="sc1" colspan="2">STAGE/스탯 강화</td>
+                <td class="sc1">특성/재능 업데이트</td>
+            </tr>
+            <tr>
+                <td class="sc2">1</td>
+                <td class="sc2">체력 +110<br>
+                    공격력 +20<br>
+                    공격 속도 +4<br></td>
+                <td class="sc3"><strong>특성 추가</strong><br>
+                    공격 시 공격력의 10%에 해당하는 마법 대미지 부여</td>
+            </tr>
+            <tr>
+                <td class="sc2">2</td>
+                <td class="sc2">체력 +150<br>
+                    공격력 +32<br>
+                    공격 속도 +5<br></td>
+                <td class="sc3"><strong>재능 [정신 파괴] 강화</strong><br>
+                    공격 시 6(+1초)간 적의 특수 능력 무효화 및 4%의 취약 효과 부여</td>
+            </tr>
+            <tr>
+                <td class="sc2">2</td>
+                <td class="sc2">체력 +175<br>
+                    공격력 +40<br>
+                    공격 속도 +6<br></td>
+                <td class="sc3"><strong>재능 [정신 파괴] 강화</strong><br>
+                    공격 시 6간 적의 특수 능력 무효화 및 8%(+4%p)의 취약 효과 부여</td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- 인프라 기능 -->
+        <table>
+            <caption><h3>인프라 기능</h3></caption>
+            <tr>
+                <td class="sc1">스킬</td>
+                <td class="sc1">개방/강화 조건</td>
+                <td class="sc1">시설</td>
+                <td class="sc1">효과</td>
+            </tr>
+            <tr>
+                <td class="sc2" rowspan="2">속셈 α<br>
+                → 속셈 β</td>
+                <td class="sc2">초기</td>
+                <td class="sc2" rowspan="2">무역소</td>
+                <td class="sc3">텍사스와 함께 무역소에 배치 시, 시간당 컨디션 소모 -0.1, 오더 수주 상한 +2</td>
+            </tr>
+            <tr>
+                <td class="sc2">2차 정예화</td>
+                <td class="sc3">텍사스와 함께 무역소에 배치 시, 시간당 컨디션 소모 -0.1, 오더 수주 상한 +4</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+
+
+
+    <!-- 파일 -->
+    <div class="profile">
+        <!-- 계약 -->
+        <div><h3>계약</h3>
+            <P>
+                오퍼레이터 라플란드는 지금 당장에라도 눈 앞의 적을 베어버리고 싶은 마음에 몸이 근질근질하다고 합니다.<br>
+                <br>
+                "기도하도록 하자. 그녀가 제발 지휘에 따라주기를."
+            </P>
+        </div>
+
+        <!-- 증표 -->
+        <div><h3>증표</h3>
+            <P>여러 사람의 이름이 피로 적혀 있는 종이. 다양한 갱단의 보스들의 이름이 적혀 있다.</P>
+        </div>
+
+        <!-- 신원 -->
+        <div class="identity">
+            <!-- 기본 정보 -->
+            <table class="tb1">
+                <caption><h3>기본 정보</h3></caption>
+                <tr>
+                    <td class="sc1">코드네임</td>
+                    <td class="sc3">라플란드</td>
+                </tr>
+                <tr>
+                    <td class="sc1">성별</td>
+                    <td class="sc3">여성</td>
+                </tr>
+                <tr>
+                    <td class="sc1">특기</td>
+                    <td class="sc3">암살, 추적술, 운전</td>
+                </tr>
+                <tr>
+                    <td class="sc1">전투 경험</td>
+                    <td class="sc3">5년</td>
+                </tr>
+                <tr>
+                    <td class="sc1">출신지</td>
+                    <td class="sc3">시라쿠사</td>
+                </tr>
+                <tr>
+                    <td class="sc1">생일</td>
+                    <td class="sc3">11월 11일</td>
+                </tr>
+                <tr>
+                    <td class="sc1">종족</td>
+                    <td class="sc3">루포</td>
+                </tr>
+                <tr>
+                    <td class="sc1">신장</td>
+                    <td class="sc3">162cm</td>
+                </tr>
+                <tr>
+                    <td class="sc1">광석병 감염 상황</td>
+                    <td class="sc3">의학 테스트 보고서 참고 결과, 감염자로 확인.</td>
+                </tr>
+            </table>
+
+            <!-- 종합 검진 -->
+            <table class="tb1">
+                <caption><h3>종합 검진</h3></caption>
+                <tr>
+                    <td class="sc1">물리적 강도</td>
+                    <td class="sc2">우수</td>
+                </tr>
+                <tr>
+                    <td class="sc1">전장 기동력</td>
+                    <td class="sc2">표준</td>
+                </tr>
+                <tr>
+                    <td class="sc1">생체 인내도</td>
+                    <td class="sc2">표준</td>
+                </tr>
+                <tr>
+                    <td class="sc1">전술 계획력</td>
+                    <td class="sc2">표준</td>
+                </tr>
+                <tr>
+                    <td class="sc1">전투 기술력</td>
+                    <td class="sc2">월등</td>
+                </tr>
+                <tr>
+                    <td class="sc1">오리지늄 아츠 적응성</td>
+                    <td class="sc2">우수</td>
+                </tr>
+        </table>
+        </div>
+
+        <!-- 프로필 -->
+        <div><h3>프로필</h3>
+            <P>신원 불명, 이력 정보 부족. 공격 전술과 숙청 작전에서 뛰어난 섬멸 능력을 보여주었다. 현재 로도스 아일랜드를 위해 가드 오퍼레이터로 일하고 있다.</P>
+        </div>
+
+        <!-- 임상 진단 분석 -->
+        <div><h3>임상 진단 분석</h3>
+            <P>
+                방사선 검사 결과, 본 오퍼레이터는 내장 기관의 윤곽이 흐릿하며, 
+                비정상적 음영이 존재하는 것으로 확인됨, 
+                순환 계통 내 오리지늄 입자 검사 결과 이상 확인. 
+                광석병 감염 증세 있음, 현단계로서는 광석병 감염자로 판단됨.<br>
+                <br>
+                <span style="display: block; text-align: center;">[체세포와 오리지늄 융합률] 13%<br>
+                오퍼레이터 라플란드의 체표면에는 이미 많은 오리지늄 결정이 생성.<br>
+                <br>
+                [혈중 오리지늄 결정 밀도] 0.27u/L<br>
+                오퍼레이터 라플란드의 병세를 엄밀하게 지켜볼 필요가 있음.</span>
+            </P>
+        </div>
+
+        <!-- 파일 자료 1 -->
+        <div><h3>파일 자료 1</h3>
+            <P>
+                라플란드라는 사람은 몹시 이해하기 어려운 사람이다. 
+                누군가는 그녀를 전투광이라고 생각하지만, 
+                사실 그녀는 평소에 굉장히 예의가 바른 모습을 보여주며, 
+                약간 잔혹한 블랙 조크에 가까운 화제이긴 하지만 심지어는 주동적으로 타인에게 말을 걸고 그 반응을 관찰하기까지 때문이다. 
+                하지만 어찌 됐든, 그녀가 긴장을 풀고 있을 때조차 다들 그녀를 두려워할 정도로 위험한 사람이란 사실에는 변함이 없다.<br>
+                <br>
+                비교적 심한 광석병 감염 상황이 그녀에게 주는 영향으로 인해, 
+                라플란드는 의료팀의 주요 감시 대상 중 하나가 되었다. 
+                약간의 검증되지 않은 정보에 따르면, 
+                라플란드는 시라쿠사에서 가장 위험한 어떤 가문 출신이라고 하지만, 
+                과거에 활동했던 모든 가문과 현재 활동 중인 모든 가문의 명단을 조사해봐도 라플란드와의 연관성은 찾을 수 없었다. 
+                한편 시라쿠사의 통치 가문의 조사는 위험성이 너무 높기에, 관련 조사는 중단되었다.
+            </P>
+        </div>
+
+        <!-- 파일 자료 2 -->
+        <div><h3>파일 자료 2</h3>
+            <P>
+                광석병은 생리적 측면에만 그 영향을 끼치는 것이 아니다. 
+                광석병은 정신적으로 라플란드를 특정 대상에 대한 이상 집착을 보이게 만들었고, 
+                여기엔 심각한 폭력 행위를 유발할 가능성도 존재한다.<br>
+                <br>
+                라플란드의 행동은 로도스 아일랜드에 의해 일정 수준 제어를 받고 있긴 하지만, 
+                전장에서 그녀가 보여주는 제멋대로식의 전투 방식은 여전히 다른 오퍼레이터들과의 협동에 큰 장애가 되고 있다.<br>
+                <br>
+                라플란드의 광석병 증상은 비교적 특수한데, 
+                자신의 원래 전투 능력을 일정 수준 강화한 것으로 보이며, 
+                이는 일반적인 광석병 환자와 비감염자 오퍼레이터들 사이에서는 거의 찾아볼 수 없는 현상이다.<br>
+                <br>
+                라플란드의 독특한 무기는 동양풍의 검으로, 
+                특수한 설계 과정을 거쳐 그녀가 마법을 사용할 때 충격성 효과를 발생시킨다. 
+                그녀는 오리지늄 아츠에 대한 제어 교육을 따로 받은 적이 없는 것으로 보이기에, 
+                이는 순전히 자신의 재능에 기반해 발현하는 힘으로 판단된다. 
+                비록 이 힘은 시전 될 시 어느 정도 약화된다는 단점이 있지만, 
+                라플란드의 기괴한 전투 스타일과 난폭한 기세 덕분에, 
+                이런 약점은 완전히 극복되었다.<br>
+                <br>
+                한편, 라플란드는 적의 약점을 파악하는데 매우 뛰어나, 
+                특수한 능력이나 오리지늄 아츠 제어 능력을 가진 자라 할지라도 라플란드와의 대결에서는 우세를 점하기가 힘들다. 
+                상대의 기술을 몇 번 관찰하는 것만으로, 
+                라플란드는 빠르게 상대의 특수 능력을 봉쇄할 수 있다.
+            </P>
+        </div>
+
+        <!-- 파일 자료 3 -->
+        <div><h3>파일 자료 3</h3>
+            <P>
+                몇몇 조사 보고와 목격담에 따르면, 
+                오퍼레이터 라플란드는 펭귄 로지스틱스의 직원이자 로도스 아일랜드 협력 인원 중 한 명인 텍사스에 대하여 상당한 관심을 보이고 있다고 하나, 
+                텍사스는 의도적으로 마주치는 것을 피하고 있다고 한다. 
+                그러나 어쩔 수 없이 함께 작전을 수행해야 하는 상황에서 오퍼레이터 라플란드는 텍사스에게 지나치게 적극적인 태도로 다가가거나, 
+                의도적으로 텍사스의 걸음걸이에 맞춰 걸으면서 이런 모호한 관계를 즐긴다.<br>
+                <br>
+                라플란드는 다른 펭귄 로지스틱스의 협력 인원들에게도 열렬한 태도를 보이지만, 
+                이들로부터 큰 호응을 얻지는 못했다. 
+                양측이 서로 마주칠 때 마다(이럴 일은 매우 드물지만), 
+                이들 사이에는 조금 어색한 기류가 감돈다.<br>
+                <br>
+                누군가 자신의 행동을 방해하지만 않는다면, 
+                라플란드는 로도스 아일랜드의 다른 오퍼레이터들을 위해 최선을 다하여 평화로운 환경을 조성하기 위해 노력할 것이다.<br>
+                <br>
+                <span style="display: block; text-align: center;">[제한된 기록]</span> 
+                <br>
+                오퍼레이터 레드에 대하여 모든 루포 족 오퍼레이터들은 거의 본능적인 수준의 거부 반응을 나타냈으며, 
+                이중 라플란드는 제어할 수 없는 공포, 선명한 적의, 감출 수 없는 기쁨이 혼재된 정서 상태를 나타내며 가장 극심한 스트레스성 반응을 보였다. 
+                오퍼레이터 라플란드의 극단적 상태에 대한 대처 방안이 나오기 전까진, 오퍼레이터 레드와의 접촉을 금할 것을 권고한다.
+            </P>
+        </div>
+
+        <!-- 파일 자료 4 -->
+        <div><h3>파일 자료 4</h3>
+            <P>
+                <span style="display: block; text-align: center;">[제한된 기록]</span>
+                <br>
+                한 비밀 경로를 통해 획득한 메시지: <br>
+                <br>
+                당신의 미래를 위해서라도, 
+                당신은 라플란드를 대하는 방식을 선택함에 있어 신중을 기할 필요가 있다. 
+                그녀는 '외톨이 늑대'이며(주의: 해당 용어는 루포 족의 속어로, 루포 족으로 인정받지 못한 루포 족을 지칭한다), 
+                큰 상처를 입은 적이 있다. 
+                그녀는 자신의 가족과 영원히 이별하였고, 
+                다른 이들의 가족이 되는 일도 영원히 없을 것이다.<br>
+                <br>
+                지금까지 그녀의 삶을 지탱해준 것이 무엇인지 당신이 알 필요는 없다. 
+                그녀의 상처를 치료해보는 건 당신의 자유지만, 
+                기억해둬야 할 것은 그녀의 광기는 영원히 치료될 수 없다는 것이다.<br>
+                <br>
+                모든 지난 일은 다시 재현될 수 없다. 
+                만약 당신이 그녀와의 관계를 유지하길 원한다면, 
+                당신은 언젠가는 선택의 기로에 서게 될 것이다. 
+                어쩌면, 당신은 아직 그녀에게 칼끝을 겨눌 준비가 안된 것이겠지.<br>
+                <br>
+                그러니, 당신에 대한 내 충언을 잘 듣길 바란다. 
+                당신과 당신이 소중히 여기는 사람들의 미래를 위해, 
+                다시 한 번 신중한 선택을 부탁한다.
+            </P>
+        </div>
+
+        <!-- 모듈 스토리 -->
+        <div><h3>모듈: '어린 송곳니' 스토리</h3>
+            <img class="mdximg" src="https://i.namu.wiki/i/xkB5D2TMa801qobNzqTTT-0Gvn88brq2LCFjADIh65UXCbGYy92PGhnEbd44gQqThrEehGGyArFEk8j3k5McuCYOrYDnYKs5WN0pwOeqAJgoL3HLQ86NmFj1Ua9d6yUBnT_KRSFES6lMmeRulZMsmg.webp">
+            <P>
+                이 무기를 만들기 위해 도공은 오랫동안 고심했다.<br>
+                <br>
+                살루초 패밀리의 보스가 직접 찾아와선 그의 딸을 위한 유일한 무기를 만들어달라고 부탁했다.<br>
+                <br>
+                그가 이 부탁을 받아들인 것은 패밀리의 권력을 경외했기 때문만은 아니었다.<br>
+                <br>
+                극동에서 온 도공은 도신의 반사광으로 사람의 영혼을 표현하고, 무기를 휘두르는 것은 곧 운명을 휘두르는 것이라고 믿었다.<br>
+                <br>
+                과거에 그는 다섯 명이 있어야 겨우 들 수 있는 대태도를 만들었다. 
+                그 칼을 지닌 무사는 전장에서 당할 자가 없었지만, 노년에 자신이 병에 걸린 것에 한을 품고는 스스로 목숨을 끊었다.<br>
+                <br>
+                과거에 그는 화려하지만 날카로움을 감춘 검을 만들었다. 그 검을 가졌던 왕은 평생 그 검을 뽑지 않았으나, 그 기세와 위세는 온 세상을 흔들었다.<br>
+                <br>
+                과거에는 그도 시칠리아 부인에게 충성을 바쳤으나, 지겨움을 느낀 부인에게 거절당했다. 
+                하지만 그는 부인이 대체 어떻게 이 폭력으로 얼룩진 나라를 통치하는지, 또한 얼마나 많은 답답한 심정을 감추고 있는지 이해했다.<br>
+                <br>
+                하지만 지금, 그는 이 별난 어린 늑대에게 어떤 이빨을 주는 게 좋을지 도무지 알 수 없었다.<br>
+                <br>
+                정교한 레이피어? 앞으로 아버지에게 변화무쌍과 예측 불가를 배울 테니까?<br>
+                <br>
+                치명적인 도끼? 핏속에 흐르는 황야의 부름을 버리기 어려울 테니까?<br>
+                <br>
+                아니, 모두 아니다. 도공은 반쯤 완성한 물건을 망설임 없이 용광로에 던져 넣었다.<br>
+                <br>
+                그녀는 그녀의 아버지처럼 잔인하면서도 우아하고 예측할 수 없는 인물이었지만, 본질은 달랐다.<br>
+                <br>
+                “아직이야? 내가 가장 사랑하는 아빠가 내 성년식까지 기다린다고는 했지만, 우리의 적은 오늘 밤 그걸 보고 싶어 하는 것 같아.”<br>
+                <br>
+                도공은 그녀에게 어울리는 무기를 만들고 있다고 설명했다. 하지만 머리를 쥐어짤수록, 오히려 어떻게 만들어야 할지 떠오르지 않았다.<br>
+                <br>
+                “이건?”<br>
+                <br>
+                여자는 무심한 태도로 한 쌍의 검을 선택했다.<br>
+                <br>
+                과거에 그는 자신의 기술을 증명할 만한 무기를 만들고 싶어 했다. 
+                하지만 너무 많은 아이디어를 쏟은 나머지 오히려 갈수록 검의 구조가 복잡해졌고, 아츠와는 잘 조화될지 몰라도 정교하게 다루기는 다소 힘들었다. 
+                심지어 칼집에 넣는 것조차 힘들 정도로.<br>
+                <br>
+                “절대 완성할 수 없는 실패작?” 하얀 늑대는 검을 휘두르더니 씨익 웃었다. “마음에 들어.”<br>
+                <br>
+                도공은 그녀의 유일무이한 영혼에는 더 특별한 무기가 어울린다고 사정하며 설득했다.<br>
+                <br>
+                “……저기, 뭔가 착각하고 있는 거 아냐? 내가 가지러 온 건 내 손에 맞는 도구야. 
+                그리고 이건 사람을 죽이기 적합해, 아주 튼튼하고, 모양도 마음에 들어. 앞으로도 간직할 생각이야. 이 정도면 충분해.”<br>
+                <br>
+                도공은 여자가 떠나는 모습을 멍하니 지켜보았다.<br>
+                <br>
+                어쩌면, 자신의 걸작은 자신이 버렸던 무기일지도 모른다.<br>
+                <br>
+                그리고 또 어쩌면, 무기로 정의할 수 있는 영혼은 창백할 것이다.<br>
+                <br>
+                그날 밤, 유명한 도공은 은퇴를 선언했고, 살루초 패밀리의 라플란드는 처음으로 자신의 트레이드마크가 될 무기를 선보였다.<br>
+                <br>
+                훗날, 사람들은 그것을 '어린 송곳니'라고 불렀다.
+            </P>
+        </div>
+    </div>
+
+
+
+    <!-- 대사 -->
+    <div class="voice">
+        <table>
+            <caption><h3>대사</h3></caption>
+            <tr>
+                <td class="sc1">상황</td>
+                <td class="sc1">대사</td>
+            </tr>
+            <tr>
+                <td class="sc2">어시스턴트 임명</td>
+                <td class="sc3">
+                    아~ 박사. 집무실에 무기 갖고 와도, 용서해… 줄 거지? 그럼 나, 여기 앉을게.
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">대화 1</td>
+                <td class="sc3">
+                    누가 박사를 노리고 있는 거 같다고? 그럼 한번… 곰~곰이 생각해 봐, 어디서 원한을 샀는지.
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">대화 2</td>
+                <td class="sc3">
+                    혹시 복수 같은 걸 하러 오는 녀석이 있다면, 주저하지 말고… 죽여버려. 네가 무기를 들기로 결정한 이상, 살인은 이유 따위가 필요하지 않으니까.
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">대화 3</td>
+                <td class="sc3">
+                    어느샌가 텍사스 주변도 꽤 떠들썩해졌네. 하하하… 좋은데! 나한테도 친구 좀 소개해줘!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">1차 정예화 후 대화</td>
+                <td class="sc3">
+                    내가 킬러라고? 그래, 해석은 자유지. 난 어떤 사람이든 될 수 있고, 어떤 일이든 할 수 있어. 
+                    그리고… 죽이고 싶으면 언제든지 죽일 수 있지. 내가 마음만 먹으면 말이야!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">2차 정예화 후 대화</td>
+                <td class="sc3">
+                    난 힘을 좋아해, 박사. 내 힘을 마음껏 쓸 수 있는, 그런 일거릴 주는 넌 최고야! 
+                    이 미친 세상에서 아직 뭔가 재밌는 게 남아있다면, 그건… 내 힘으로 모든 걸 굴복시키는 정도일 거야!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">신뢰도 상승 후 대화 1</td>
+                <td class="sc3">
+                    텍사스? 후훗, 걔는 날 굉~장히 무서워하는 모양이지만, 딱히 뭘 할 생각은 없어. 
+                    그냥, 난 옛날의 그 텍사스로 돌아와 줬으면 할 뿐이야. 지금처럼 나약하지 않던, 그 시절의 텍사스로 말이지…
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">신뢰도 상승 후 대화 2</td>
+                <td class="sc3">
+                    저건… 저 빨간 건… 설마…! 박사, 나는 절대 저 여자에게 다가가지 않을 거야! 그런데도, 그런데도! 
+                    이상한 기분이야… 싸우면 분명 죽을 텐데! 이렇게나 저 자식이랑 싸우고 싶다니!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">신뢰도 상승 후 대화 3</td>
+                <td class="sc3">
+                    텍사스랑 있었던 옛날이야기가 듣고 싶다고? 하하하! 무서움이란 걸 모르는구나 넌? 뭐, 언젠간 알게 될 거야. 얘기하는 건 내가 아니겠지만.
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">방치</td>
+                <td class="sc3">
+                    자는 게 좋을 거야… 적어도 지금은 달콤한 꿈을…
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">오퍼레이터 입사</td>
+                <td class="sc3">
+                    정의의 길은 폭동의 사도에 의해 끊어졌다. 나의 주인이여, 복수와 악의의 이름 아래, 약한 자를 인도해다오!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">작전기록 학습</td>
+                <td class="sc3">
+                    점점 강해지는 내 힘, 사랑해 줄 거지?
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">1차 정예화 (승진)</td>
+                <td class="sc3">
+                    아하하! 너의 그 '총애', 확실히 잘 받았어. 텍사스한텐 이게 될까?
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">2차 정예화 (승진)</td>
+                <td class="sc3">
+                    그래! 이거면 됐어! 더욱더 힘을 해방하자! 이건… 너의 사명이야!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">팀 배치</td>
+                <td class="sc3">
+                    팀장은 텍사스더러 하라 해야지!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">팀장 임명</td>
+                <td class="sc3">
+                    내 팀에는 텍사스를 넣어줘!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">작전 출발</td>
+                <td class="sc3">
+                    훗… 여러분, 어차피 너희 얼굴 따윈 기억 못 하겠지만… 뭐, 가볼까?
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">작전 개시</td>
+                <td class="sc3">
+                    너희가 적이냐? 부탁인데 봐주지 마라? 날 따분하게 만들지 말라고.
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">오퍼레이터 선택 1</td>
+                <td class="sc3">
+                    어디 솜씨 한 번 볼까?
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">오퍼레이터 선택 2</td>
+                <td class="sc3">
+                    자, 어떻게 할래?
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">배치 1</td>
+                <td class="sc3">
+                    나쁘지 않은 배치네!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">배치 2</td>
+                <td class="sc3">
+                    하하!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">작전 중 1</td>
+                <td class="sc3">
+                    어이, 힘내~ 어떻게 조금 더 해보면, 나한테 이길 수 있을지도 모르잖아?
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">작전 중 2</td>
+                <td class="sc3">
+                    네가 할 수 있을까?
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">작전 중 3</td>
+                <td class="sc3">
+                    몸부림쳐 보라고!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">작전 중 4</td>
+                <td class="sc3">
+                    자, 앞으로 조금만 더!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">고난이도 작전 종료</td>
+                <td class="sc3">
+                    이 정도로 끝이야? 재미없게시리.
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">3★ 작전 종료</td>
+                <td class="sc3">
+                    후후, 내가 직접 만든 밀푀유, 맛은 어때?
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">2★ 작전 종료</td>
+                <td class="sc3">
+                    그럭저럭 이랄까, 몇 명 놓친 건 내 책임이네.
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">작전 실패</td>
+                <td class="sc3">
+                    끝내주는데… 저 자식들을 쳐죽여 버리고 싶은 욕망이, 전보다 더 끓어오르잖아! 아하하!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">시설에 배치</td>
+                <td class="sc3">
+                    어라… 빨간 그림자가 잠깐 보인 것 같은데.
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">터치</td>
+                <td class="sc3">
+                    하하.
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">신뢰도 터치</td>
+                <td class="sc3">
+                    널 알면 알수록, 텍사스에 대해서도 이해가 돼. 최고야!
+                </td>
+            </tr>
+            <tr>
+                <td class="sc2">인사</td>
+                <td class="sc3">
+                    후훗. 안녕, 박사.
+                </td>
+            </tr>
+        </table>
+        　
+    </div>
+
+
+
+    <!-- 푸터 -->
+    <footer>
+        <p>© 2025 박예린. All rights reserved.</p>
+    </footer>
+</body>
+</html>

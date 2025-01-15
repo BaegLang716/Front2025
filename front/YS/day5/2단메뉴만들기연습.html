@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2단메뉴만들기연습</title>
+
+        <style>
+            ul{
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+
+            }
+
+            .menu{
+                /* border: 1px solid black; */
+
+                display: flex;
+            }
+
+            .menu_item{
+                width: 25%;
+                height: 40px;
+                line-height: 40px;
+
+                /* border: 1px solid black;*/
+
+                text-align: center;
+                background-color: #67b0d1;
+                color: white;
+
+                font-size: 12px;
+                margin-right: 1px;
+
+                position: relative;
+            }
+
+            .menu_item:hover{
+                background-color: #7bbbd7;
+
+            }
+
+            .hidden_menu{
+                width: 40%;
+                border: 1px solid beige;
+                background-color: beige;
+                color: #ccc;
+
+                /* 부모를 기준으로 배치*/
+                position: absolute;
+                top: 40px;
+                left: 0px;
+
+                display: none;
+            }
+
+            .menu_item:hover .hidden_menu{
+                display: block;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        
+        <ul class="menu">
+            <li class="menu_item">상위메뉴1
+                <!--하위메뉴-->
+                <ul class="hidden_menu">
+                    <li>하위메뉴1</li>
+                    <li>하위메뉴1</li>
+                    <li>하위메뉴1</li>
+                </ul>
+            </li>
+            <li class="menu_item">상위메뉴2</li>
+            <li class="menu_item">상위메뉴3</li>
+            <li class="menu_item">상위메뉴4</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor autem veniam soluta pariatur ducimus perferendis hic, ratione, nam explicabo earum repudiandae quia ad obcaecati illum animi reiciendis dignissimos ipsam laboriosam?
+        Ratione quo suscipit, veniam repellat dignissimos pariatur eos neque sunt saepe, vero eligendi repudiandae! Quidem magni beatae aut nobis eos iste nisi culpa. Fugiat pariatur, aspernatur labore eos enim sint!
+        Odio quia suscipit impedit dicta quae quos iste, eum ratione eos autem voluptates consectetur temporibus nostrum dignissimos quod itaque nobis laborum minima tempore? Distinctio dolor iure eum cum aspernatur nisi!
+        A nihil molestiae commodi illo. Temporibus reiciendis sed vel omnis reprehenderit eius accusamus dolor fugiat neque maiores exercitationem, eos harum, saepe velit debitis dolores pariatur. Tempora reiciendis quia temporibus suscipit.
+        Minima sint in optio nulla voluptas alias exercitationem, architecto ut incidunt fuga omnis fugiat eaque magnam eius earum deserunt vero ipsum itaque molestiae? Sunt consequuntur fuga obcaecati qui, est eaque.</p>
+    </body>
+</html>

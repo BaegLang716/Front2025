@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>footer연습(수정)</title>
+
+        <style>
+
+            @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&display=swap');
+
+            .footer{
+                
+                padding: 20px;
+                /* border: 1px solid black; */
+                font-size: 12px;
+                background-color: floralwhite;
+            }
+
+            .footer_all{
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+
+            .footer_top{
+                display: flex;
+            }
+
+            .footer_item1{
+                width: 50%;
+                /* height: 200px; */
+                /* border: 1px solid red; */
+            }
+
+            .footer_item2{
+                width: 10%;
+                /* height: 200px; */
+                /* border: 1px solid orange; */
+                text-align: right;
+                
+            }
+
+            span{
+                display: inline-block;
+                width: 210px;
+            }
+
+            .title{
+                font-family: "Jua", serif;
+                font-weight: bold;
+                font-style: normal;
+                font-size: 14px;
+            }
+
+            ul{
+                list-style-type: none;
+                padding: 0px;
+            }
+
+            a{
+                color: black;
+                text-decoration: inherit;
+            }
+
+            .footer_item2 li{
+                padding-bottom: 5px;
+            }
+
+            .account{
+                font-weight: bold;
+                font-size: 14px;
+                
+                border: 1px solid black;
+            }
+
+            .login{
+                color: #f06a00;
+                margin: 0;
+                display: inline-block;
+                text-align: center;
+
+                border: 1px solid blue;
+            }
+
+            .service{
+                display: inline-block;
+                text-align: center;
+                border-left: 1px solid black;
+
+                
+            }
+
+            .footer_mid{
+                display: flex;
+            }
+
+
+            p{
+                line-height: 2;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!--footer 영역-->
+        <div class="footer">
+            <div class="footer_all">
+                <!--위쪽 영역-->
+                <div class="footer_top">
+                    <!--첫 번째 칸 영역-->
+                    <div class="footer_item1">
+                        <img src="https://www.dunkindonuts.co.kr/build/assets/logo-11ac097b.svg" alt="던킨 이미지">
+
+                        <p>
+                            서울특별시 서초구 남부순환로 2620(양재동 11-149번지)<br>
+                            <span>사업자 등록번호 : 303-81-09535</span>
+                            비알코리아(주) 대표이사 도세호<br>
+                            <span>TEL : 080-555-3131</span>
+                            개인정보관리책임자 : 심수연<br>
+                            COPYRIGHT Ⓒ 2024 BRKOREA COMPANY. ALL RIGHTS RESERVED.
+                        </p>
+                    </div>
+
+                    <!--두 번째 칸 영역-->
+                    <div class="footer_item2">
+                        <h2 class="title">
+                            <a href="">BRAND</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="https://www.dunkindonuts.co.kr/brand/history">HISTORY</a>
+                            </li>
+                            <li>
+                                <a href="https://www.dunkindonuts.co.kr/brand/story">COMMITMENT</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--세 번째 칸 영역-->
+                    <div class="footer_item2">
+                        <h2 class="title">
+                            <a href="">MENU</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="https://www.dunkindonuts.co.kr/menu?cat=1">DONUT</a>
+                            </li>
+                            <li>
+                                <a href="https://www.dunkindonuts.co.kr/menu?cat=2">FOOD</a>
+                            </li>
+                            <li>
+                                <a href="">COFFEE</a>
+                            </li>
+                            <li>
+                                <a href="">BEVERAGE</a>
+                            </li>
+                            <li>
+                                <a href="">SNACK & MORE</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--네 번째 칸 영역-->
+                    <div class="footer_item2">
+                        <h2 class="title">
+                            <a href="">EVENT</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">프로모션</a>
+                            </li>
+                            <li>
+                                <a href="">제휴혜택</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--다섯 번째 칸 영역-->
+                    <div class="footer_item2">
+                        <h2 class="title">STORE</h2>
+                        <ul>
+                            <li>
+                                <a href="">매장찾기</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--여섯 번째 칸 영역-->
+                    <div class="footer_item2">
+                        <h2 class="title">
+                            <a href="">ORDER</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">케이터링</a>
+                            </li>
+                            <li>
+                                <a href="">딜리버리</a>
+                            </li>
+                            <li>
+                                <a href="">선물하기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--중간 영역-->
+                <div class="footer_mid">
+                    <!--계정-->
+                    <div class="account">
+                        <a class="login" href="https://www.dunkindonuts.co.kr/userLogin?redirect_url=%2F">로그인</a>
+                        <a class="service" href="https://www.happypointcard.com/page/join/index.spc">회원가입</a>
+                        <a class="service" href="https://www.dunkindonuts.co.kr/customer/voc">고객센터</a>
+                    </div>
+
+                    <div class="SNS">
+                        <ul>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

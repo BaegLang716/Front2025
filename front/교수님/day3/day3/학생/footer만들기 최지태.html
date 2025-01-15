@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        a {
+            display: inline-block;
+            padding: 0 10px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        p {
+            margin: 0 6px;
+            white-space: nowrap;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            min-width: 1300px;
+            width: 100%;
+        }
+
+        .topArea {
+            display: flex;
+            width: 100%;
+
+            align-items: center;
+        }
+
+        .topArea>div {
+            display: flex;
+            flex-direction: row;
+            min-width: 1200px;
+
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        select {
+            padding: 5px 20px;
+            margin-left: 5px;
+        }
+
+        .middleArea {
+            display: flex;
+            flex-direction: row;
+            width: 900px;
+            gap: 20px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border-bottom: 1px solid gray;
+        }
+
+        .middleArea_img {
+            display: flex;
+            align-items: start;
+            width: 25%;
+        }
+
+        .middleArea_img>img {
+            box-sizing: border-box;
+            padding: 20px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .middleArea_center {
+            box-sizing: border-box;
+            width: 25%;
+            padding: 10px 0;
+        }
+
+        .middleArea_center>p {
+            font-size: 12px;
+            color: rgb(56, 56, 56);
+            margin: 2px 0;
+        }
+
+        .middleArea_center>h2 {
+            margin: 0;
+            color: rgb(56, 56, 56);
+        }
+
+        .middleArea_center>a {
+            font-size: 12px;
+            padding: 0;
+        }
+
+        .middleArea_center>a:link {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .bottomArea {
+            width: 70%;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .infoArea {
+            width: 100%;
+            font-size: 11px;
+            color: rgb(126, 126, 126);
+            background-color: rgb(43, 43, 43);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .infoArea>div {
+            width: 60%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- footer -->
+    <div class="footer">
+        <!-- top area -->
+        <div class="topArea">
+            <!-- 링크 모음 그룹룹 -->
+            <div>
+                <a href="#">회사소개</a>
+                <p>|</p>
+                <a href="#">Investor Relations</a>
+                <p>|</p>
+                <a href="#">인재채용</a>
+                <p>|</p>
+                <a href="#">입점 / 제휴문의</a>
+                <p>|</p>
+                <a href="#">공지사항</a>
+                <p>|</p>
+                <a href="#">고객의 소리</a>
+                <p>|</p>
+                <a href="#">이용약관</a>
+                <p>|</p>
+                <a href="#">개인정보 처리방침</a>
+                <p>|</p>
+                <a href="#">쿠팡페이 이용약관</a>
+                <p>|</p>
+                <a href="#">신뢰관리센터</a>
+                <p>|</p>
+                <a href="#">제휴마케팅</a>
+                <p>|</p>
+                <a href="#">광고안내</a>
+                <select>
+                    <option>Global Site</option>
+                </select>
+            </div>
+        </div>
+        <!-- middle area -->
+        <div class="middleArea">
+            <!-- 쿠팡 브랜드 이미지 -->
+            <div class="middleArea_img">
+                <img src="https://image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png" alt="image">
+            </div>
+            <!-- 회사 설명 문구 -->
+            <div class="middleArea_center">
+                <p>상호명 및 호스팅 서비스 제공 : 쿠팡(주)</p>
+                <p>대표이사 : 강한승,박대준</p>
+                <p>서울시 송파구 송파대로 570</p>
+                <p>사업자 등록번호 : 120-88-00767 </p>
+                <p>통신판매업신고 : 2017-서울송파-0680</p>
+                <a href="#">서비스 가입사실 확인 ></a>
+            </div>
+            <div class="middleArea_center">
+                <p>365고객센터 | 전자금융거래분쟁처리담당</p>
+                <h2>1577-7011 (유료)</h2>
+                <p>서울시 송파구 송파대로 570</p>
+                <p>email : help@coupang.com</p>
+            </div>
+            <div class="middleArea_center">
+                <p>채무지급보증 안내</p>
+                <p>당사는 고객님이 현금 결제한 금액에 대해</p>
+                <p>채무지급보증 계약을 체결하여</p>
+                <p>안전거래를 보장하고 있습니다.</p>
+                <a href="#">서비스 가입사실 확인 ></a>
+            </div>
+        </div>
+        <!-- bottom area -->
+        <div class="bottomArea">
+            <!-- 인증 마크 사진을 못 가져옴 -->
+        </div>
+        <!-- info area -->
+        <div class="infoArea">
+            <!-- 주의사항? 정보 문구 -->
+            <div>
+                <p>사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.</p>
+                <p>마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다.</p>
+                <p>쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다.
+                </p>
+                <p>쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다.
+                </p>
+                <p>Copyright © Coupang Corp. 2010-2024 All Rights Reserved.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

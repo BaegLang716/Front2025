@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>index</title>
+
+        <style>
+            /*header 영역*/
+            header{
+                /* border: 1px solid black; */
+                height: 100px;
+                background-color: rgb(245, 248, 248);
+                position: relative;
+            }
+
+            .title{
+                /* border: 1px solid black; */
+                position: absolute;
+                left: 10px;
+                top: 20px;
+            }
+
+            .search{
+                /* border: 1px solid black; */
+                width: 200px;
+                height: 50px;
+                
+                position: absolute;
+                right: 10px;
+                bottom: 20px;
+
+                display : flex;
+            }
+
+            .search input{
+                border: none;
+                outline: none;
+                width: 150px;
+            }
+
+            .search_btn{
+                /* background-color: blue; */
+                width: 50px;
+                height: 50px;
+
+                background-image: url("./images/검색.png");
+                background-size: cover;
+                background-position: center;
+            }
+
+            /*nav 영역*/
+            nav{
+                height: 40px;
+                padding: 20px;
+                background-color: rgb(232, 243, 243);
+            }
+
+            nav a{
+                color: black;
+                text-decoration: none;
+                padding: 5px;
+            }
+
+            /*section 영역*/
+            section{
+                height: 600px;
+            }
+
+            section ul{
+                justify-content: center;
+                display: flex;
+                list-style: none;
+                padding: 0px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            section li{
+                width: 300px;
+                padding: 20px;
+                border: 0.5px solid rgb(255, 241, 241);
+                position: relative;
+                font-size: 14px;
+            }
+
+            section li img{
+                width: 200px;
+                height: 220px;
+            }
+
+            .name{
+                width: 130px;
+                padding: 10px;
+                color: red;
+                background-color: black;
+                font-size: 20px;
+                position: absolute;
+                top: 0px;
+                left: 10px;
+            }
+
+            /*footer 영역*/
+            footer{
+                height: 60px;
+                background-color: rgb(233, 239, 239);
+                display: flex;
+            }
+
+            .item{
+                /* border: 1px solid black; */
+                width: 33%;
+                height: 60px;
+                padding-top: 20px;
+                box-sizing: border-box;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <header>
+            <!--title 영역-->
+            <div class="title">
+                <img src="./images/logo.png">
+            </div>
+
+            <!--search 영역-->
+            <div class="search">
+                <input type="text">
+                <div class="search_btn"></div>
+            </div>
+        </header>
+
+        <nav>
+            <a href="login.html">로그인</a>
+            <a href="joinus.html">회원가입</a>
+            <a href="index.html">홈으로</a>
+        </nav>
+
+        <section>
+            <ul>
+                <li>
+                    <div class="name">bigdata</div>
+                    <img src="./images/img01.png">
+                    <p>프로젝트기반 빅데이터 분석과정</p>
+                </li>
+                <li>
+                    <div class="name">Android</div>
+                    <img src="./images/img02.png">
+                    <p>자바(JAVA)&안드로이드 개발자 양성과정</p>
+                </li>
+                <li>
+                    <div class="name">Front</div>
+                    <img src="./images/img03.png">
+                    <p>Web기반 프론트엔드 자바개발자 양성과정</p>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <div class="item"><img src="./images/footer_acorn.png"></div>
+            <div class="item">(주)에이콘이즈 에이콘아카데미(홍대)</div>
+            <div class="item">COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.</div>
+        </footer>
+
+    </body>
+</html>

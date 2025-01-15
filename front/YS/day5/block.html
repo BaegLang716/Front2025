@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>block</title>
+
+        <style>
+            
+            .box{
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+
+                padding: 10px;
+                /* padding: 10px 20px; 상하(위아래), 좌우 */
+                /* padding: 10px 20px 30px 40px 위, 오른쪽, 아래쪽, 왼쪽 */ 
+
+                /*
+                padding-left: ;
+                padding-right: ;
+                padding-top: ;
+                padding-bottom: ;
+                */
+
+                /* box-sizing: content-box;    : 패딩을 주면 크기가 늘어난다. */
+                box-sizing: border-box;     /* 패딩을 주어도 크기가 늘어나지 않는다 */
+
+            }
+
+            .box1{
+                width: 400px;
+                height: 400px;
+                border: 1px solid black;
+                margin-top: 30px;
+
+                padding: 10px 20px 30px 40px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <h2>블럭태그</h2>
+
+        <p>
+            한줄 전체 차지함<br>
+            크기를 지정할 수 있다
+        </p>
+
+        <ul>
+            <li>제목 Hn 태그</li>
+            <li>p태그</li>
+            <li>ul_li</li>
+            <li>div</li>
+        </ul>
+
+        <div class="box">내용1</div>
+        <div class="box">내용2</div>
+        <div class="box">내용3</div>
+
+
+        <div class="box1">내용4</div>
+        
+
+    </body>
+</html>

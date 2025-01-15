@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        /* css   active만 가능함 */
+
+        .btn:active{
+            background-color: red;
+        }
+
+        
+        button.aaa {
+            background-color: darkblue;
+            color: white;
+            transform: scale(0.95); /* 살짝 눌린 효과 */
+        }
+    </style>
+
+    
+
+
+
+</head>
+<body>
+    
+    <button class="btn">클릭</button>
+
+
+
+    <button id="myButton">클릭</button>
+
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+         this.classList.toggle('aaa'); // 클릭할 때마다 클래스 추가/제거
+});
+    </script>
+</body>
+</html>

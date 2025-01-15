@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2단메뉴만들기</title>
+
+        <style>
+            .menu{
+                display: flex;
+                
+            }
+
+            .menu_item{
+                width: 25%;
+                height: 40px;
+                line-height: 40px;
+
+                border: 1px solid black;
+                text-align: center;
+                background-color: skyblue;
+                color: white;
+
+            }
+
+            .hidden_menu{
+                display: none; /* 안보이기 */
+
+                width: 50%;
+                /* background-color: antiquewhite; */
+                color: gray;
+                padding: 5px;
+                box-sizing: border-box;
+                border: 1px solid black;
+
+                /* 상위메뉴를 기준으로 배치 */
+                position: absolute;
+                left: 0px;
+                top: 40px;
+
+                z-index: 10;
+            }
+
+            .menu_item:hover .hidden_menu{
+                display: block;
+            }
+
+            .menu_item:hover{
+                background-color: cadetblue;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <ul class="menu">
+            <li class="menu_item">메뉴1</li>
+                <!--하위메뉴-->
+                <ul class="hidden_menu">
+                    <li>하위메뉴1</li>
+                    <il>하위메뉴2</il>
+                    <il>하위메뉴3</il>
+                </ul>
+            <li class="menu_item">메뉴2</li>
+            <li class="menu_item">메뉴3</li>
+            <li class="menu_item">메뉴4</li>
+        </ul>
+        
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>입사지원서</title>
+
+        <style>
+
+            @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&display=swap');
+
+            *{
+                font-family: "Gamja Flower", serif;
+                font-weight: 400;
+                font-style: normal;  
+            }
+
+            .all{
+                width: 550px;
+                padding: 20px 40px;
+                border: 2px solid black;
+                margin: 0 auto;
+            }
+
+            .info span{
+                display: inline-block;
+                width: 60px;
+            }
+
+            button{
+                padding: 10px;
+                border: 0px;
+                background-color: rgb(212, 212, 212);
+            }
+
+            .button{
+                padding-top: 10px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="all">
+            <div class="top">
+                <h1>프런트엔드 개발자 지원서</h1>
+
+                <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+            </div>
+            <!--hr태그 : 일자로 선만 나오는 태그-->
+            <hr>
+
+            <div class="info">
+                <h2>개인정보</h2>
+                <ul>
+                    <li><span>이름</span><input type="text" placeholder="공백없이 입력하세요"></li>
+                </ul>
+                <ul>
+                    <li><span>연락처</span><input type="text"></li>
+                </ul>
+            </div>
+
+            <div class="field">
+                <h2>지원 분야</h2>
+                <ul>
+                    <li><label><input type="radio" name="field"> 웹 퍼블리싱</label></li>
+                    <li><label><input type="radio" name="field"> 웹 애플리케이션 개발</label></li>
+                    <li><label><input type="radio" name="field"> 개발환경 개선</label></li>
+                </ul>
+            </div>
+
+            <div class="motivation">
+                <h2>지원 동기</h2>
+                <textarea cols="87" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+            </div>
+
+            <div class="button">
+                <button>접수하기</button>
+                <button>다시쓰기</button>
+            </div>
+        </div>
+
+    </body>
+</html>

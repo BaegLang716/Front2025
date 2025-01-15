@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>보드판문제</title>
+
+        <style>
+
+            .board{
+                width: 400px;
+                height: 600px;
+                border: 1px solid black;
+
+                position: relative;
+            }
+
+            .h{
+                width: 30px;
+                height: 30px;
+                background-color: blue;
+
+                position: absolute;
+                top: 100px;
+                left: 0px;
+            }
+            
+            .e{
+                width: 30px;
+                height: 30px;
+                background-color: blue;
+                text-align: center;
+
+                position: absolute;
+                top: 100px;
+                left: 30px;
+            }
+
+            .e span{
+                position: absolute; /* 부모를 기준으로 위치 설정 */
+    top: 50%; /* 부모 높이의 50%로 이동 */
+    left: 50%; /* 부모 너비의 50%로 이동 */
+    transform: translate(-50%, -50%); /* 글자의 중심점을 정확히 중앙으로 이동 */
+            }
+
+            .l1{
+                width: 30px;
+                height: 30px;
+                background-color: blue;
+                text-align: center;
+
+                position: absolute;
+                top: 100px;
+                left: 60px;
+            }
+
+            .l2{
+                width: 30px;
+                height: 30px;
+                background-color: blue;
+                text-align: center;
+
+                position: absolute;
+                top: 100px;
+                left: 90px;
+            }
+
+            .o{
+                width: 30px;
+                height: 30px;
+                background-color: blue;
+                text-align: center;
+
+                position: absolute;
+                top: 100px;
+                left: 120px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="board">
+            <div class="h">h</div>
+            <div class="e"><span>e</span></div>
+            <div class="l1">l</div>
+            <div class="l2">l</div>
+            <div class="o">o</div>
+        </div>
+        
+        
+    </body>
+</html>

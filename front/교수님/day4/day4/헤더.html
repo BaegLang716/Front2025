@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap{
+            height: 200px;
+            border: 1px solid black;
+
+            display: flex;
+
+        }
+
+
+        .wrap > div{
+            width: 33.3%;
+            height: 200px;
+            border:1px solid black;
+        }
+
+
+        /* 검색바 스타일*/
+        .search-bar{
+            width: 300px;
+            height: 50px;
+            border:3px solid rgb(112, 166, 211);
+            border-radius: 50px;
+ 
+
+            /**/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+            /*배치*/
+            position: absolute;
+            bottom: 50px;
+            left: 100px;
+        }
+
+        .search-btn{
+            width: 40px;
+            height: 40px;
+            /*background-color: blue;*/
+
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6JO-CB3HSZIPWlJl_5K9T2kEUfyo0qtYE3Q&s");
+            background-size: cover;
+
+
+        }
+
+        .search-bar input{
+            border: none;
+            outline: none;
+
+            padding-left: 20px;
+        }
+  
+
+        .search_wrap{
+            position: relative;
+        }
+
+
+        .menu_wrap{
+        /* 부모 정하기기*/
+            position: relative;
+        }
+
+        /* 메뉴 만들기 스타일*/
+        .menu_bar{
+
+            margin: 0px;
+            padding: 0px; 
+            list-style: none;
+            font-size: 12px;
+
+
+                   
+            display: flex;
+            /*border: 1px solid black;*/
+
+             /* 부모기준으로 배치하기*/
+
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+         }
+
+
+
+        .menu_bar  li{
+            /*border: 1px solid black;*/
+            padding: 10px; 
+
+        }
+
+
+
+        .menu_bar img{
+        display: block;
+        }
+
+
+      
+
+        .title_wrap{
+            position: relative;
+        }
+
+        .title_wrap img{
+
+            position: absolute;
+            left: 100px;
+            top:100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="wrap">
+
+        <div class="title_wrap">  
+              <img src="./image/rn_header_homeshopping_v2.gif">            
+        </div>
+
+        <!-- 검색바 영역 -->
+        <div class="search_wrap">               
+            <!--검색바-->
+            <div class="search-bar">
+                <input type="text">
+                <div class="search-btn"></div>
+            </div>
+        </div>
+
+        <!-- 메뉴영역  -->
+        <div  class="menu_wrap"> 
+            
+            
+             <!--메뉴만들기 -->
+            <ul class="menu_bar">
+                <li>
+                    <img src="./image/btn_header_utill1.png" > <span>로그인</span>         
+                </li>
+                <li>
+                    <img src="./image/btn_header_utill2.png">  <span>내정보</span>
+                </li>
+                <li>
+                    <img src="./image/btn_header_utill3.png"> <span>장바구니</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>
