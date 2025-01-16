@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+
+            // 수 맞추기 게임 함수
+            function 수맞추기게임() {
+
+            // 컴퓨터가 1~100 사이의 임의의 수를 정한다
+            const 정답 = Math.floor(Math.random() * 100) + 1;
+            let 시도횟수 = 0;
+
+            // 게임 시작 메시지
+            console.log("수 맞추기 게임을 시작합니다! 1부터 100까지의 숫자 중 하나를 맞춰보세요.");
+
+            // 사용자에게 숫자를 입력받고 반복
+            const 입력받기 = () => {
+
+                // 사용자가 입력할 때마다 반복하는 함수
+                const 사용자입력 = prompt("숫자를 입력하세요: "); // 사용자 입력 받기
+                const 숫자입력 = parseInt(사용자입력); // 문자열을 숫자로 변환
+
+                시도횟수++;
+
+                // 숫자가 아닌 값을 입력하면 경고 메시지
+                if (isNaN(숫자입력)) {
+                    alert("숫자를 입력해 주세요!");
+                    입력받기();
+                    return;
+                }
+
+                // 입력한 숫자와 정답을 비교
+                if (숫자입력 > 정답) {
+                    alert("Down! 더 작은 숫자를 입력하세요.");
+                    입력받기(); // 다시 입력 받기
+                } else if (숫자입력 < 정답) {
+                    alert("Up! 더 큰 숫자를 입력하세요.");
+                    입력받기(); // 다시 입력 받기
+                } else {
+                    alert(`정답! ${시도횟수}번 만에 맞추셨습니다!`);
+                    if (시도횟수 <= 3) {
+                        alert(`축하합니다! ${시도횟수}번 만에 맛있는 간식을 드립니다!`);
+                    }
+                }
+            }
+
+            입력받기(); // 사용자로부터 첫 입력을 받기 시작
+        }
+
+// 게임 실행
+수맞추기게임();
+</script>
+    </body>
+</html>
