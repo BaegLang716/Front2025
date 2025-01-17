@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수예제4</title>
+</head>
+
+<body>
+    <img src="" id="food">
+
+    <script>
+
+
+        /*
+        기능: 스파게티만들기
+        입력: 없음
+        반환: 음식이미지지
+        */
+
+        function 스파게티만들기() {
+            //스파게티 레시피를 출력하는 코드 작성
+            alert("1.면을 삶는다");
+            alert("2.면을 삶는다");
+            alert("3.면을 삶는다");
+            alert("4.면을 삶는다");
+
+            let 이미지 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0cY46gAJqdXG1ip4Yo30sHecpXcW5xH7VF9nvznjpt8IWTsNcezK8a9w&s"
+            return 이미지;
+        }
+
+        let result = 스파게티만들기();    //함수호출
+        let foodTag = document.getElementById("food");
+        foodTag.src = result;
+    </script>
+</body>
+
+</html>
