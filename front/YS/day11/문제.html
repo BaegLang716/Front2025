@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열문제</title>
+</head>
+
+<body>
+    <script>
+
+        //문제1
+        const 과일 = ['apple', 'banana', 'cherry'];
+
+        document.write("첫 번째: ", 과일[0], "<br>", "세 번째: ", 과일[2]);
+
+
+        document.write("<br><br>==========<br><br>");
+
+
+        //문제2
+        const 컬러 = ['red', 'blue', 'green', 'yellow'];
+
+        document.write(컬러.length);
+
+
+        document.write("<br><br>==========<br><br>");
+
+
+        //문제3
+        const 점수 = [10, 20, 30, 40];
+        let sum1 = 0;
+
+        for (let i = 0; i < 점수.length; i++) {
+            sum1 = sum1 + 점수[i];
+        }
+
+        document.write("모든 숫자의 합: " + sum1);
+
+
+        document.write("<br><br>==========<br><br>");
+
+
+        //문제4
+        const 이름 = ['영숙', '순자', '영자', '옥순', '현숙'];
+
+        for (let i = 0; i < 이름.length; i++) {
+            document.write(이름[i] + " ");
+        }
+
+        document.write("<br><br>==========<br><br>");
+
+
+        //문제5
+        const numbers1 = [2, 4, 6, 8, 10];
+
+        let result = "false";
+        for (let i = 0; i < numbers1.length; i++) {
+            if (numbers1[i] == 7) {
+                result = true;
+                break;
+            }
+        }
+
+        document.write(result);
+
+        document.write("<br><br>==========<br><br>");
+
+
+        //문제6
+        const numbers2 = [12, 41, 6, 18, 10];
+
+        let max = numbers2[0];
+        for (let i = 0; i < 5; i++) {
+            if (max < numbers2[i]) {
+                max = numbers2[i];
+                break;
+            }
+        }
+
+        document.write("가장 큰 수: " + max);
+
+        document.write("<br><br>==========<br><br>");
+
+
+        //문제7
+        const kors1 = [90, 8, 70, 99, 100];
+
+        let sum2 = 0;
+        let avg1 = 0;
+        for (let i = 0; i < kors1.length; i++) {
+            sum2 = sum2 + kors1[i]
+        }
+
+        avg1 = sum2 / kors1.length;
+
+        document.write("총점: " + sum2 + ", " + "평균: " + avg1);
+
+        document.write("<br><br>==========<br><br>");
+
+
+        //문제8
+        const kors2 = [90, 80, 70, 99, 100];
+
+        let sum3 = 0;
+        let avg2 = 0;
+        let count = 0;
+        for (let i = 0; i < kors2.length; i++) {
+            sum3 = sum3 + kors2[i];
+        }
+        avg2 = sum3 / kors2.length
+        for (let j = 0; j < kors2.length; j++) {
+            if (avg2 < kors2[j]) {
+                count++;
+            }
+        }
+
+        document.write(count);
+
+        document.write("<br><br>==========<br><br>");
+
+
+        //문제9
+        const prices = [1000, 1500, 900, 1800, 2000, 1200];
+
+        const newprices = [];
+        for (let i = 0; i < prices.length; i++) {
+            if (prices[i] > 1200) {
+                newprices[i] = prices[i]
+            }
+        }
+
+        document.write(newprices)
+
+    </script>
+</body>
+
+</html>

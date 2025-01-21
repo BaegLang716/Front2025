@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열문제2</title>
+</head>
+
+<body>
+    <script>
+
+        //입력
+        //출력 : 총점(sum), 평균(avg)
+
+        //준비 : 
+        //처리 : 
+
+        //국어점수 5개 총점과 평균구하기
+
+        let scores = [90, 80, 77, 100, 89];
+
+        let sum = 0;
+        /*
+        sum = sum + scores[0];  // 0 + 90 => 90
+        sum = sum + scores[1];  // 90 + 80 => 170
+        sum = sum + scores[2];  // 170 + 70 
+        sum = sum + scores[3];
+        sum = sum + scores[4];
+
+        console.log(sum);
+        */
+
+        //총점구하기
+
+        for (let i = 0; i < scores.length; i++) {   //반복횟수이자 배열의 인덱스로 사용
+            sum = sum + scores[i];  // 0 + 90 => 90
+        }
+
+        console.log(sum);
+
+    </script>
+</body>
+
+</html>

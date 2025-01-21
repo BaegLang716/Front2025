@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열연습</title>
+</head>
+
+<body>
+    <script>
+        //1차원배열
+        function arr1() {
+            let fruit1 = ["딸기", "사과", "앵두", "배", "망고", "복숭아", "키위", "파인애플", "포도"];
+
+            let vegetable1 = ["배추", "브로콜리", "상추", "고추", "피망", "가지", "당근", "마늘", "양파"];
+
+
+            document.write("[1차원배열]"+"<br>");
+            for (let i = 0; i < 9; i++) {
+                document.write(fruit1[i]+"<br>");
+                document.write(vegetable1[i]+"<br>");
+            }
+        }
+
+
+
+        //2차원배열
+        function arr2() {
+            let fruit = [
+                ["딸기", "사과", "앵두"],
+                ["배", "망고", "복숭아"],
+                ["키위", "파인애플", "포도"]
+            ];
+
+            let vegetable = [
+                ["배추", "브로콜리", "상추"],
+                ["고추", "피망", "가지"],
+                ["당근", "마늘", "양파"]
+            ];
+
+
+            document.write("[2차원배열]"+"<br>");
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    document.write(fruit[i][j]+"<br>");
+                    document.write(vegetable[i][j]+"<br>");
+                }
+                document.write("<br>");
+            }
+        }
+
+
+        //3차원배열
+        function arr3() {
+            let food = [
+                [
+                    ["딸기", "사과", "앵두"],
+                    ["배", "망고", "복숭아"],
+                    ["키위", "파인애플", "포도"]
+                ],
+
+                [
+                    ["배추", "브로콜리", "상추"],
+                    ["고추", "피망", "가지"],
+                    ["당근", "마늘", "양파"]
+                ]
+            ];
+
+
+            document.write("[3차원배열]"+"<br>");
+            for (let i = 0; i < 2; i++) {
+                for (let j = 0; j < 3; j++) {
+                    for (let k = 0; k < 3; k++) {
+                        document.write(food[i][j][k]+"<br>");
+                    }
+                }
+            }
+        }
+    </script>
+
+    <button onclick="arr1()">1차원배열</button>
+    <button onclick="arr2()">2차원배열</button>
+    <button onclick="arr3()">3차원배열</button>
+</body>
+
+</html>
