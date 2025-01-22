@@ -127,12 +127,24 @@
         const newprices = [];
         for (let i = 0; i < prices.length; i++) {
             if (prices[i] > 1200) {
-                newprices[i] = prices[i]
+                newprices[i] = prices[i];
             }
         }
 
-        document.write(newprices)
+        document.write(newprices);
 
+        document.write("<br><br>==========<br><br>");
+
+
+        //문제10
+        const numbers3 = [1, 2, 3, 4, 5];
+        const newnumbers = []
+
+        for (let i = 0; i < 5; i++) {
+            newnumbers[i] = 2 * numbers3[i];
+        }
+
+        document.write(newnumbers);
     </script>
 </body>
 

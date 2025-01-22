@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기념일구하기기</title>
+</head>
+
+<body>
+
+    <div class="date200"></div>
+
+    <script>
+        let specDate = new Date("2025-01-07");  //200일 후?
+        specDate.setDate(specDate.getDate() + 200);
+
+        let year = specDate.getFullYear();
+        let month = specDate.getMonth() + 1;
+        let date = specDate.getDate();
+
+        document.querySelector(".date200").innerHTML = `${year} ${month} ${date}`;
+    </script>
+
+
+</body>
+
+</html>

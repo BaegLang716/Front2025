@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach연습</title>
+</head>
+
+<body>
+    <script>
+        const 과일 = ['apple', 'banana', 'cherry'];
+
+        function forEach(f) {
+            for (let i = 0; i < 과일.length; i++) {
+                let fruit = 과일[i];
+                f(fruit, i)
+            }
+        }
+
+        forEach()
+    </script>
+</body>
+
+</html>

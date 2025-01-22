@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열매서드1</title>
+</head>
+
+<body>
+    <script>
+        //pop() : 배열열요소 꺼내기(맨뒤), push(); => 배열요소 넣기(맨뒤)
+
+        let arr = [];
+
+        //arr[0]=10;
+
+        arr.push(10);   //순서대로(0 인덱스 부터) 배열에 넣기
+        arr.push(20);
+
+        console.log(arr);
+
+
+        let result = arr.pop(); //원본 배열이 변경됨됨
+        console.log(result);
+        console.log(arr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>배열매서드6</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // 문제: 아래 numbers 배열에서 숫자 7이 있는지 확인하고, 있으면 true , 아니면 false를 출력하세요.
+        const numbers = [2, 4, 6, 8, 10];
+
+
+        let search = 8;
+        let result = false;
+
+        for (let i = 0; i < numbers.length; i++) {
+            let item = numbers[i];
+            if (item === search) {
+                result = true;
+            }
+        }
+
+        console.log(result);
+
+
+        let result2 = numbers.includes(7);
+        console.log(result2);
+
+
+
+    </script>
+</body>
+
+</html>
