@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map연습</title>
+</head>
+
+<body>
+    <script>
+        let names = ["박시우", "권지연", "이동우"];
+
+        let newNames = [];
+
+        for (let i = 0; i < names.length; i++) {
+            let item = names[i];
+            newNames[i] = item + "님";
+        }
+        console.log(names);
+        console.log(newNames);
+
+
+        let newNames2 = names.map(function (item, index) {
+            return item + "씨";
+        })
+        console.log(newNames2);
+
+
+        let newNames3 = names.map((item, index) => { return item + "씨" });
+        console.log(newNames3);
+
+
+        let newNames4 = names.map(item => item + "님 ^^+*");
+        console.log(newNames4);
+
+    </script>
+</body>
+
+</html>

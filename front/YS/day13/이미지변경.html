@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지변경경</title>
+
+    <script>
+        function changeImg() {
+            //alert("작동확인");
+            const childImg = document.getElementById("childImg");
+            console.log(childImg);
+
+            childImg.src="./imgs/girl.png";
+
+        }
+    </script>
+</head>
+
+<body>
+    <img src="./imgs/boy.png" alt="소년" onclick="changeImg()" id="childImg">
+
+</body>
+
+</html>
