@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤값뽑기</title>
+</head>
+
+<body>
+    <script>
+        const foodMenu = [
+            [
+                ["피자", "치킨", "햄버거", "스테이크", "파스타"],
+                ["김밥", "떡볶이", "라면", "불고기", "냉면"],
+                ["초밥", "우동", "덮밥", "튀김", "돈까스"],
+                ["타코", "부리또", "퀘사디아", "파히타", "나초"],
+                ["팟타이", "똠얌꿍", "카오팟", "쏨땀", "커리"]
+            ],
+            [
+                ["파니니", "샌드위치", "베이글", "크로와상", "머핀"],
+                ["오므라이스", "비빔밥", "잡채", "칼국수", "만두"],
+                ["스시롤", "연어스테이크", "가츠동", "야끼소바", "라멘"],
+                ["치즈버거", "핫도그", "감자튀김", "오믈렛", "치킨랩"],
+                ["그린커리", "마살라", "난", "비리야니", "사모사"]
+            ],
+            [
+                ["팝콘", "나초", "칩스", "초콜릿", "사탕"],
+                ["양념치킨", "간장치킨", "후라이드치킨", "닭강정", "닭꼬치"],
+                ["라자냐", "리조또", "까르보나라", "알프레도파스타", "스파게티"],
+                ["프레첼", "도넛", "팬케이크", "와플", "크레페"],
+                ["모히또", "마가리타", "피냐콜라다", "에스프레소", "라떼"]
+            ]
+        ];
+
+        function select(random) {
+            const num1 = Math.floor(Math.random() * foodMenu.length);
+            const num2 = Math.floor(Math.random() * foodMenu[num1].length);
+            const num3 = Math.floor(Math.random() * foodMenu[num1][num2].length);
+            return foodMenu[num1][num2][num3];
+        }
+
+        const randomfood = select(foodMenu);
+        document.write(randomfood);
+
+    </script>
+</body>
+
+</html>

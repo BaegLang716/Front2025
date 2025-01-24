@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        
+        function randoms(){
+            let random = [];
+            while(random.length<8){
+                const number =Math.floor(Math.random()*50);
+                if(!random.includes(number)){
+                    random.push(number);
+                }
+
+            }
+            return random;
+        }
+        
+
+        let result = randoms();
+        console.log (result);
+        document.write(result);
+
+        function movies(){
+            let movie =["범죄도시1", "범죄도시2", "범죄도시3", "범죄도시4", "베테랑", "베테랑2"];
+            let movieIndex=Math.floor(Math.random()*6);
+            return movie[movieIndex];
+        }
+
+        let result2=movies();
+        document.write(result2);
+
+    </script>
+</body>
+</html>

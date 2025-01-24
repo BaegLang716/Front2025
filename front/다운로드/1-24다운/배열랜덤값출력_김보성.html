@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 할까 말까 </title>
+</head>
+<body>
+    
+    <script>
+
+        // 1차원, 2차월, 3차원 배열중 원하는 것을
+        // 사용하여 배열에서 랜덤한 값을
+        // 반환하는 함수 만들기
+
+
+        const 할까말까 = [
+            [ "가기 싫어도 가자", "오늘은 푹 쉬고 내일부터 열심히" ],   //운동
+            [ "오늘은 공부를 좀 해보자", "공부는 내일부터" ],          //공부
+            [ "늦은 시간에 먹으면 살찌니까 먹지 말자", "다이어트는 내일부터!" ]
+        ]   //야식
+
+        function 운동(){
+            //alert("12344")
+            const randomIndex = Math.floor(Math.random()*할까말까[0].length);
+            alert(할까말까[0][randomIndex])
+        }
+        
+        function 공부(){
+           //alert("12344")
+           const randomIndex = Math.floor(Math.random()*할까말까[1].length);
+           alert(할까말까[1][randomIndex]);
+        }
+
+        function 야식(){
+            //alert("12344")
+            const randomIndex = Math.floor(Math.random()*할까말까[2].length);
+            alert(할까말까[2][randomIndex]);
+        }
+
+
+    </script>
+
+    <h2> 할까.... 말까.... </h2>
+    <button onclick="운동()"> 운동 </button>
+    <button onclick="공부()"> 공부 </button>
+    <button onclick="야식()"> 야식 </button>
+
+</body>
+</html>

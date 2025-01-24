@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤배열</title>
+</head>
+<body>
+    <div>
+        <button onclick="checkLucky()">운세 뽑기</button>
+        <div id="luckyDiv"></div>
+    </div>
+    <script>
+        //1차원 배열
+        function checkLucky(){
+            const luckyDiv = document.querySelector("#luckyDiv")
+
+            const lucky = ["대길(大吉)", "길(吉)", "중길(中吉)", "소길(小吉)", "말길(末吉)", 
+                           "흉(凶)", "대흉(大凶)"]
+            
+            const randomNum = Math.floor(Math.random() * lucky.length)
+
+            luckyDiv.innerHTML = `오늘 당신의 운세는 "${lucky[randomNum]}"입니다.`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점심고르기</title>
+    <style>
+        .lunch{
+            background-color: rgb(209, 241, 231);
+            font-weight: bold;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function lunch_menu_select(){
+            let lunch_menu = [
+            ["제육볶음","국밥","덮밥"],
+            ["돈까스","우동","초밥"],
+            ["햄버거","피자","부리또"]
+        ]
+
+        let rand_sort = Math.floor(Math.random()*lunch_menu.length)
+        let rand_menu = Math.floor(Math.random()*lunch_menu.length)
+            return lunch_menu[rand_sort][rand_menu];
+        }
+        console.log(lunch_menu_select())
+
+
+        function menu_selection(){
+            let item = document.getElementById("menu");
+            item.innerHTML=`오늘의 점심은 "${lunch_menu_select()}" 당첨`;
+            item.classList.add("lunch");
+        }
+    </script>
+</head>
+<body>
+    <p id="menu" onclick="menu_selection()">오늘의 점심은?</p>
+</body>
+</html>

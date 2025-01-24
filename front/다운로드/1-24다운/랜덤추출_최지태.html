@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 50px;
+        }
+    </style>
+    <script>
+
+
+        function start() {
+            let arr =
+                ["비빔밥", "불고기", "김치찌개", "된장찌개", "삼계탕", "스테이크", "피자", "파스타", "햄버거", "샐러드", "짜장면", "짬뽕", "탕수육", "마라탕", "꿔바로우", "초밥", "라멘", "돈까스", "우동", "덴푸라"]
+
+
+            let food = document.getElementById("food")
+            let dd = document.getElementById("dd")
+            for (let i = 1; i <= 100; i++) {
+                setTimeout(() => {
+                    i % 2 == 1 ? dd.innerHTML = '..두구두구..두구두구' : dd.innerHTML = '두구두구..두구두구..'
+                    let rNum = Math.floor(Math.random() * arr.length)
+                    food.innerHTML = `오늘의 점심 : ${arr[rNum]}`
+                }, 10 * i)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="dd"></h1>
+    <h1 id="food">오늘의 점심 : </h1>
+    <button onclick="start()">start</button>
+</body>
+
+</html>

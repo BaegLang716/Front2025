@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function getRandomFood(){
+            const foods = [
+                "떡 추가", "오뎅 추가", "중국당면", "분모자",
+                "치즈", "햄", "베이컨", "계란", "우동사리",
+                "게란찜", "참치마요밥", "주먹김밥", "모둠튀김",
+                "야채튀김", "김말이", "공기밥", "쿨피스"
+            ];
+
+            const randomIndex = Math.floor(Math.random() * foods.length);
+            return foods[randomIndex];
+        }
+
+        result = getRandomFood();
+        console.log(result);
+
+        result = getRandomFood();
+        console.log(result);
+        
+        result = getRandomFood();
+        console.log(result);
+    
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

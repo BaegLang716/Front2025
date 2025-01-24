@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  </style>
+  <script>
+    let food = [
+      "한우갈비", "우삼겹", "오리불고기", "샤브샤브", "닭백숙", 
+      "삼계탕", "닭갈비", "닭볶음탕", "연어회", "연어초밥", 
+      "참치회", "광어회", "고등어회", "소고기솥밥", "버섯솥밥", 
+      "명란솥밥", "볶음밥", "김치라면", "짬뽕", "국수", 
+      "김치찌개", "된장찌개", "만둣국", "미역국"
+    ];
+
+    let clickCount = 0;
+
+    function result()
+    {
+      clickCount++;
+
+      if (clickCount > 10)
+      {
+        alert("이제 그만하고 결정하세요.");
+        return;
+      }
+
+      function meel()
+      {
+        const randomIndex = Math.floor(Math.random() * food.length);
+        return food[randomIndex];
+      }
+
+      document.body.innerHTML = "";
+      document.write("오늘 점심에는 " + meel() + ", 저녁에는 " + meel() + "을(를) 드셔보세요.");
+
+      let ReplayButton = document.createElement("button");
+      ReplayButton.innerText = "다시 추천 받기";
+      ReplayButton.onclick = result;
+
+      document.body.appendChild(ReplayButton); 
+    }
+  </script>
+</head>
+<body>
+  <button onclick="result()">오늘의 추천 메뉴</button>
+</body>
+</html>

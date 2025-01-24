@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function card(){
+            let list = ["우리", "신한", "기업", "하나", "농협", 
+            "국민", "비씨", "현대", "삼성", "롯데"];
+
+                let randomIndex = Math.floor(Math.random() * list.length);
+                return list[randomIndex];
+            
+        }
+
+        result = card();
+        console.log(result);
+        document.write(result + "<br>");
+
+        result = card();
+        console.log(result);
+        document.write(result+ "<br>");
+
+        result = card();
+        console.log(result);
+        document.write(result);
+
+    </script>
+
+</head>
+<body>
+    <!--<button onclick="card()">오늘의 카드는?</button>-->
+</body>
+</html>

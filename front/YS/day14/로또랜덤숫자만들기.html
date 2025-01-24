@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function lottoNumber() {
+            let lottoNumbers = [15, 8, 16, 13, 11, 9];
+            return lottoNumbers;
+        }
+
+        //랜덤숫자로 된 배열 반환
+        //입력: X
+        //반환: 숫자배열
+        function getLottoNumber2() {
+            let lottoNumbers = [];    //let lottoNumbers = new Array(6);
+
+            let random = Math.floor(Math.random() * 45);  //0~44
+            console.log(random);
+            lottoNumbers[0] = random;
+
+            random = Math.floor(Math.random() * 45);  //0~44
+            console.log(random);
+            lottoNumbers[1] = random;
+
+            random = Math.floor(Math.random() * 45);  //0~44
+            console.log(random);
+            lottoNumbers[2] = random;
+
+            random = Math.floor(Math.random() * 45);  //0~44
+            console.log(random);
+            lottoNumbers[3] = random;
+
+            random = Math.floor(Math.random() * 45);  //0~44
+            console.log(random);
+            lottoNumbers[4] = random;
+
+            random = Math.floor(Math.random() * 45);  //0~44
+            console.log(random);
+            lottoNumbers[5] = random;
+        }
+
+        getLottoNumber2();
+
+        function getLottoNumber3() {
+            let lottoNumbers = [];    //let lottoNumbers=new Array(6);
+
+            for (let i = 0; i < 6; i++) {
+                let random = Math.floor(Math.random() * 45);    //0~44
+                console.log(random);
+                lottoNumbers[i] = random;
+            }
+            console.log(lottoNumbers);
+
+            return lottoNumbers;
+        }
+
+        getLottoNumber3();
+
+
+        //입력:
+        //반환: 숫자로 된 배열(중복 안되게)
+        function getLottoNumber4() {
+            let lottoNumbers = [];
+
+            while (lottoNumbers.length < 6) {
+                const random = Math.floor(Math.random() * 45);   //0~44
+                if (!lottoNumbers.includes(random)) { //없으면
+                    lottoNumbers.push(random);
+                }
+            }
+            return lottoNumbers;
+        }
+
+        let result = getLottoNumber4();
+        console.log("=============");
+        console.log(result);
+
+        function getLottoNumbers5() {
+            // 1부터 45까지의 숫자 배열 생성
+            let origin = new Array(45).fill().map(function (item, index) {
+                return index + 1; // 1~45
+            });
+
+            //요소가 45개인 배열요소 1~45
+            
+            let result = [];
+
+            // 배열을 섞기
+            for (let i = 0; i < origin.length; i++) {
+                let randomIndex = Math.floor(Math.random() * origin.length); // 난수 발생
+                let removed = origin.splice(randomIndex, 1); // 원본 배열에서 난수 인덱스에 해당하는 요소를 제거
+                result.push(removed[0]); // 제거된 값 추가
+            }
+            console.log(result);
+
+            // 앞에서 6개 가져오기
+            let lottoNumbers = result.slice(0, 6);   // 0~6전 
+
+            console.log(lottoNumbers);
+            return lottoNumbers;
+        }
+
+        console.log("*********");
+        let result2= getLottoNumbers5();
+        console.log(result2);
+
+
+        //
+        console.log("===========")
+        let testArr = new Array(45).fill().map(function(item, index){return index+1});
+        console.log(testArr);
+
+        //
+        console.log("*************")
+        let testArr2=new Array(45);
+        for(i=0; i<testArr2.length; i++){
+            testArr2[i]=i+1;
+        }
+        console.log(testArr2);
+    </script>
+</body>
+
+</html>

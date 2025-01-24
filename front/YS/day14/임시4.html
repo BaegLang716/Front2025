@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Panel Example</title>
+    <!-- Prism.js 스타일 추가 -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+    <style>
+        /* 코드 판 스타일링 */
+        .code-panel {
+            background-color: #858585; /* 하얀 배경 */
+            color: #333333; /* 어두운 글자색 */
+            padding: 16px;
+            padding-top: 50px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            
+            position: relative;
+            margin: 10px auto; /* 위쪽 여백을 줄였음 */
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        /* 코드 블록 안 스타일 */
+        pre {
+            margin: 0;
+        }
+
+        /* 언어 태그 표시 스타일 */
+        .language-tag {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            background-color: #444;
+            color: white;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* 복사 버튼 스타일 */
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* 복사 버튼 클릭 시 색상 */
+        .copy-btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 코드 판 -->
+<div class="code-panel">
+    <!-- 언어 태그 표시 -->
+    <div class="language-tag">JavaScript</div>
+    <!-- 복사 버튼 -->
+    <button class="copy-btn" onclick="copyCode()">Copy</button>
+    <pre><code class="language-javascript">
+        // Hello World 출력하는 함수
+        function sayHello() {
+            console.log("Hello, World!");
+        }
+        sayHello();
+    </code></pre>
+</div>
+
+<!-- Prism.js 라이브러리 추가 -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+
+<script>
+    // 복사 기능 함수
+    function copyCode() {
+        // 코드 블록 선택
+        const codeBlock = document.querySelector('pre code');
+        
+        // 코드 블록을 선택하여 범위 지정
+        const range = document.createRange();
+        range.selectNode(codeBlock);
+        
+        // 선택된 범위를 복사
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        
+        // 클립보드로 복사
+        document.execCommand('copy');
+        
+        // 선택 영역 제거
+        window.getSelection().removeAllRanges();
+        
+        // 사용자에게 알림
+        alert('코드가 클립보드에 복사되었습니다!');
+    }
+</script>
+
+</body>
+</html>

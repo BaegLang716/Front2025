@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .menu {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 14px; 
+        }
+    </style>
+
+    <script>
+        function createWrap() {
+            const wrap = document.getElementById("result");
+            const menuList = getMenu();
+            // wrap.innerHTML="";
+            for (let i = 0; i < menuList.length; i++) {
+                const menu = document.createElement("div");
+                menu.classList.add("menu");
+                menu.innerHTML = menuList[i];  
+                wrap.appendChild(menu);
+
+            }
+        }
+
+        function getMenu() {
+            return ["치킨", "피자", "햄버거"];
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 메뉴가 나올 자리 -->
+    <div id="result"></div>
+
+    <button onclick="createWrap()">메뉴 보기</button>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Panel Example</title>
+    <!-- Prism.js 스타일 추가 -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+    <style>
+        /* 코드 판 스타일링 */
+        .code-panel {
+            background-color: #2d2d2d; /* 어두운 배경 */
+            color: #f8f8f2; /* 글자색 */
+            padding: 20px;
+            padding-top: 0px;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            overflow-x: auto;
+            white-space: pre-wrap; /* 줄바꿈 */
+        }
+        /* 코드 블록 안 스타일 */
+        pre {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 코드 판 -->
+<div class="code-panel">
+    <pre><code class="language-javascript">
+        // Hello World 출력하는 함수
+        function sayHello() {
+            console.log("Hello, World!");
+        }
+        sayHello();
+    </code></pre>
+</div>
+
+<!-- Prism.js 라이브러리 추가 -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //1~3차원 배열에서 랜덤한 값을 반환하는 함수 만들기
+        //1. 랜덤 숫자 생성
+        //2. 반환
+        
+        function num(){
+            const num1=[111,222,333,444,555,666,777,888,999];
+            //alert("asda");
+            //let num1 = [1,2,3,4,5,6,7,8,9];
+            const randomIndex = Math.floor(Math.random()*num1.length);
+            return num1[randomIndex];
+        }
+
+        result = num();
+        console.log(result);
+
+    </script>
+</head>
+<body>
+    <!-- <button onclick="num()">숫자 반환</button> -->
+</body>
+</html>

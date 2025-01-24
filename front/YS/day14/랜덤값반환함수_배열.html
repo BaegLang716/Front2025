@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>배열연습</title>
+</head>
+
+<body>
+   <script>
+      function arr() {
+         let fruit = [
+            ["딸기", "사과", "앵두"],
+            ["배", "망고", "복숭아"],
+            ["키위", "파인애플", "포도"]
+         ];
+
+         let random = Math.floor(Math.random() * 3);
+         let random2 = Math.floor(Math.random() * 3);
+
+         let selectFruit = fruit[random][random2];
+
+         //alert(`나온 과일: ${selectFruit}`);
+         return selectFruit;
+      }
+      document.write("<h2>랜덤한 과일</h2>")
+      document.write("나온과일: "+arr());
+   </script>
+
+   <!-- <h2>랜덤한 과일 선택하기</h2> -->
+   <!-- <button onclick="arr()">과일추첨</button> -->
+</body>
+
+</html>

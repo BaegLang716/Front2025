@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Code Panel Example</title>
+   <!-- Prism.js 스타일 추가 -->
+   <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+   <style>
+      /* 코드 판 스타일링 */
+      .code-panel {
+         background-color: #6e6e6e;
+         /* 원래 어두운 배경으로 수정 */
+         color: #f8f8f2;
+         /* 글자색 */
+         padding: 16px;
+         padding-top: 50px;
+         border-radius: 8px;
+         font-family: 'Courier New', Courier, monospace;
+         font-size: 14px;
+         overflow-x: auto;
+         position: relative;
+         margin: 10px auto;
+         width: 90%;
+         max-width: 900px;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         box-sizing: border-box;
+      }
+
+      /* 코드 블록 안 스타일 */
+      pre {
+         margin: 0;
+      }
+
+      /* 언어 태그 표시 스타일 */
+      .language-tag {
+         position: absolute;
+         top: 12px;
+         left: 16px;
+         background-color: #444;
+         color: white;
+         padding: 8px 16px;
+         font-size: 14px;
+         border-radius: 5px;
+         font-weight: bold;
+      }
+
+      /* 복사 버튼 스타일 */
+      .copy-btn {
+         position: absolute;
+         top: 12px;
+         right: 16px;
+         padding: 8px 16px;
+         background-color: #007bff;
+         color: white;
+         border: none;
+         cursor: pointer;
+         font-size: 14px;
+         border-radius: 5px;
+         transition: background-color 0.3s ease;
+      }
+
+      .copy-btn:hover {
+         background-color: #0056b3;
+      }
+
+      /* 복사 버튼 클릭 시 색상 */
+      .copy-btn:focus {
+         outline: none;
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- HTML 코드 판 -->
+   <div class="code-panel">
+      <div class="language-tag">HTML</div>
+      <button class="copy-btn" onclick="copyCode('html')">Copy</button>
+      <pre><code class="language-markup">
+        <!-- HTML 예시 코드 -->
+        <div class="container">
+            <h1>Hello, World!</h1>
+            <p>This is an example of HTML code.</p>
+        </div>
+    </code></pre>
+   </div>
+
+   <!-- CSS 코드 판 -->
+   <div class="code-panel">
+      <div class="language-tag">CSS</div>
+      <button class="copy-btn" onclick="copyCode('css')">Copy</button>
+      <pre><code class="language-css">
+         /* CSS 예시 코드 */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </code></pre>
+   </div>
+
+   <!-- JSON 코드 판 -->
+   <div class="code-panel">
+      <div class="language-tag">JSON</div>
+      <button class="copy-btn" onclick="copyCode('json')">Copy</button>
+      <pre><code class="language-json">
+        {
+            "name": "John",
+            "age": 30,
+            "city": "New York"
+        }
+    </code></pre>
+   </div>
+
+   <!-- Prism.js 라이브러리 추가 -->
+   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+
+   <script>
+      // 복사 기능 함수
+      function copyCode(language) {
+         const codeBlock = document.querySelectorAll('.code-panel')[language === 'html' ? 0 : language === 'css' ? 1 : 2].querySelector('pre code');
+
+         // 코드에서 여백을 제거한 실제 텍스트만 가져오기
+         const codeText = codeBlock.textContent.trim();
+
+         // 임시 텍스트 영역을 만들어서 복사할 텍스트를 삽입
+         const textArea = document.createElement('textarea');
+         textArea.value = codeText;
+         document.body.appendChild(textArea);
+
+         // 텍스트 영역을 선택하고 복사
+         textArea.select();
+         document.execCommand('copy');
+
+         // 임시 텍스트 영역을 삭제
+         document.body.removeChild(textArea);
+
+         // 사용자에게 알림
+         alert('코드가 클립보드에 복사되었습니다!');
+      }
+   </script>
+</body>
+
+</html>
