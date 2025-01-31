@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .item{
+         width: 100px;
+         height: 100px;
+      }
+
+      .item:nth-child(1){
+         background-color: red;
+         transition: 1s;
+      }
+
+      .item:nth-child(2){
+         background-color: green;
+         /*실행시간*/
+         transition-property: background-color; /*대상*/
+         transition-duration: 1s; /*실행시간*/
+         transition-timing-function: ease; /*실행 곡선*/
+         transition-delay: 1s;
+      }
+
+      .item:nth-child(1):hover{
+         background-color: blue;
+      }
+
+      .item:nth-child(2):hover{
+         background-color: yellow;
+      }
+   </style>
+</head>
+<body>
+   <div class="item"></div>
+   <div class="item"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .wrap{
+         height: 200px;
+      }
+
+      .gallery{
+         height: 50px;
+         /* border: 1px solid black; */
+      }
+   </style>
+
+   <script>
+      
+
+      // message배열의 요소의 내용이 순차적으로 바뀔 수 있도록 한다
+      let message=[ "곧 설연휴 시작 !!! ^^ 신난다 !! " ,"프론트 프로젝트 곧 시작 합니다!! 재미있게 해 줘요  🍔 🍟  ",  "날씨가 넘 추워요 감기 조심  " ,"설연휴 잘 보내고 와요 !!"   ,"for , if, 1차원배열, 함수 연습 연습" ,"함수가 별거냐 ^^" , "배열이 별거냐 ^^ "] ;
+      let index=0;
+
+      function next(){
+         // alert("작동확인");
+         alert(message[index]);
+         index++; //index = index +1
+
+         if(index >= message.length){
+            index=0;
+         }
+
+         gallery.animate([])
+      }
+   </script>
+</head>
+<body>
+   <div class="wrap">
+      <div class="gallery"></div>
+   </div>
+
+   <button onclick="next()">다음</button>
+</body>
+</html>

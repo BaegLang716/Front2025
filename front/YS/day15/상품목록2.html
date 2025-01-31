@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      ul {
+         list-style: none;
+         padding: 0px;
+         margin: 0px;
+
+         display: flex;
+         border: 1px solid black;
+         justify-content: center;
+      }
+
+      ul li {
+         width: 300px;
+         height: 300px;
+         border: 1px solid black;
+         text-align: center;
+      }
+
+      img {
+         width: 200px;
+         height: 200px;
+      }
+   </style>
+
+   <script>
+      function init() {
+         alert("init");
+
+         // 서버에 데이터 요청하기
+         let products = [
+            {
+               url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCUSlDEq-q3Fqd2_EOqXcpDaPDJheYnKM0LA&s",
+               title: "패딩",
+               price: "320000"
+            }, {
+               url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zXtZyZQIAEjsbLdpzaXi0Er3jx9R1cqg1A&s",
+               title: "상하세트 츄리닝",
+               price: "89000"
+            }, {
+               url: "data:image/jpeg;base64,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",
+               title: "티셔츠",
+               price: "39000"
+            }
+         ];
+
+         console.log(products);
+
+         let product_list = document.querySelector(".product_list");
+         for (let i = 0; i < products.length; i++) {
+            let item = products[i];
+            console.log(item);
+
+            let li = document.createElement("li");
+            li.innerHTML = `
+            <img src="${item.url}">
+            <p>${item.title}</p>
+            <p>${item.price}</p>`;
+
+            //부모에 추가하기
+            product_list.appendChild(li);
+         }
+      }
+   </script>
+</head>
+
+<body onload="init()">
+   <ul class="product_list">
+      <!-- 자바스크립트로 상품 목록 만들기기 -->
+   </ul>
+</body>
+
+</html>
