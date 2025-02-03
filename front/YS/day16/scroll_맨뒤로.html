@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      .content {
+         height: 2000px;
+      }
+   </style>
+
+   <script>
+      function scrollToBottom() {  // 페이지의 전체높이이
+         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      }
+   </script>
+</head>
+
+<body>
+   <button onclick="scrollToBottom()">맨뒤로</button>
+   <div class="content"></div>
+</body>
+
+</html>

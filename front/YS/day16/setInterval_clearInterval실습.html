@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+      let intervalId;
+      function hi() {
+         // alert("hi");
+
+         // 3초마다 alert("hi");
+         intervalId = setInterval(function () {
+            alert("hi");
+         }, 3000);  // 콜백함수, 밀리초
+      }
+
+      function stopHi() {
+         // alert("stop");
+         clearInterval(intervalId);
+      }
+   </script>
+</head>
+
+<body>
+   <button onclick="hi()">3초마다 안녕</button>
+   <button onclick="stopHi()">그만!!</button>
+</body>
+
+</html>

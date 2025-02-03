@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+      let message = [];
+      let index = 0;
 
- 
+      function makeArray() {
+         // alert("작동확인");
 
-    function makeArray(){
-      // alert("sdlfjldsf");
+         //menu클래스 밑에 있는 메뉴정보를 가져오기
+         //배열에 넣기
+         //배열을 console.log출력
 
-      //menu 클래스 밑의 있는 메뉴 정보를 가져오기
-      //배열에 넣기
-      //배열을 console.log로 출력
 
-      let menus = document.querySelectorAll(".menu > div");
-      let menuArr = [];
+         let menu = document.querySelector(".menu");
+         menu.innerHTML = message[index];
+         index++;
 
-      for(let i = 0; i < menus.length; i++){
-        let item = menus[i];
-        menuArr[i] = item.innerHTML;
+         lf(index >= menu.length){
+            index=0;
+         }
+
+         
       }
-
-      //배열확인
-      console.log(menuArr);
-    }
-    
-  </script>
+   </script>
 </head>
-<body>
-  
-  <div class="menu">
-    <div>돈까스</div>
-    <div>제육볶음</div>
-    <div>오므라이스</div>
-    <div>카레라이스</div>
-  </div>
 
-  <button onclick="makeArray()">클릭</button>
+<body>
+   <div class="menu">
+      <div class="food">돈까스</div>
+      <div class="food">제육</div>
+      <div class="food">카레돈까스</div>
+      <div class="food">오므라이스</div>
+   </div>
+
+   <button onclick="makeArray()">클릭</button>
 </body>
+
 </html>

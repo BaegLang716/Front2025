@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+      function doRotate() {
+         // alert("작동");
+
+         // 1. 내용 가져오기
+         // 2. 첫 글자 뽑아오기
+         // 3. 두 번째 글자부터 전체 뽑아오기
+         // 4. 2,3 순서를 바꾸기
+         // 5. 내용을 변경시키기
+         let content = document.getElementById("content");
+         let contentValue = content.innerHTML;
+         // alert(contentValue); //hello
+         let first = contentValue.substr(0, 1);
+         // alert(first);
+         let reamins = contentValue.substr(1);
+         // alert(reamins);
+         contentValue = reamins + first;
+         content.innerHTML = contentValue;
+      }
+
+      let intervalId;
+      function startRotate() {
+                                 // 함수
+         intervalId = setInterval(doRotate, 1000);
+      }
+
+      function stopRotate() {
+         clearInterval(intervalId);
+         // alert("작동");
+      }
+   </script>
+</head>
+
+<body>
+   <div id="content">hello</div>
+
+   <button onclick="startRotate()">시작</button>
+   <button onclick="stopRotate()">그만</button>
+</body>
+
+</html>
