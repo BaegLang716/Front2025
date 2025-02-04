@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      ul{
+         width: 100px;
+      }
+
+      /* 메뉴 아이템 */
+      ul li{
+         border: 1px solid black;
+         height: 40px;
+
+         position: relative;
+      }
+
+      .underLine{
+         width: 0px;
+         height: 2px;
+         background-color: red;
+
+         position: absolute;
+         bottom: 0px;
+         left:0px;
+
+         transition: 0.7s;
+      }
+
+      li:hover .underLine{
+         width: 100%;
+      }
+   </style>
+</head>
+
+<body>
+   <ul>
+      <li>
+         메뉴1
+
+         <!-- 요소 직접 넣기 -->
+         <div class="underLine"></div>
+      </li>
+   </ul>
+</body>
+
+</html>

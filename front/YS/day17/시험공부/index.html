@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <link href="search.css" rel="stylesheet">
+
+   <style>
+      header {
+         height: 100px;
+         background-color: aqua;
+
+         position: relative;
+      }
+
+      .title {
+         position: absolute;
+         left: 10px;
+         top: 10px;
+      }
+
+      .search {
+         position: absolute;
+         right: 10px;
+         bottom: 10px;
+      }
+
+      nav {
+         height: 60px;
+         background-color: blue;
+      }
+
+      section {
+         background-color: yellow;
+      }
+
+      section ul {
+         list-style: none;
+         margin: 0px;
+         padding: 0px;
+         border: 1px solid black;
+
+         display: flex;
+
+         width: 910px;
+         margin: 0 auto;
+      }
+
+      section ul li {
+         width: 300px;
+         height: 300px;
+         border: 1px solid black;
+      }
+
+      footer {
+         height: 100px;
+         background-color: aqua;
+
+         display: flex;
+      }
+
+      footer>div {
+         width: 33%;
+         /* border: 1px solid black; */
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <!--  -->
+      <div class="title">타이틀</div>
+
+      <!-- 검색바 -->
+      <div class="search">
+         <input type="text">
+         <div class="btn"></div>
+      </div>
+   </header>
+
+   <nav>
+      <a href="login.html">로그인</a>
+      <a href="regist.html">회원가입</a>
+      <a href="index.html">홈으로</a>
+   </nav>
+
+   <section>
+      <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+      </ul>
+   </section>
+
+   <footer>
+      <div></div>
+      <div></div>
+      <div></div>
+   </footer>
+</body>
+
+</html>

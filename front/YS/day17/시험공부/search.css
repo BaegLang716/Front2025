@@ -1,0 +1,27 @@
+.search {
+   width: 200px;
+   height: 40px;
+   border: 1px solid;
+
+   display: flex;
+}
+
+.btn {
+   width: 40px;
+   height: 40px;
+   /* border: 1px solid black; */
+   box-sizing: border-box;
+
+   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkcBL3bCNZ9wju2NJZS0t5d2uvTrNh3dKT6A&s);
+   background-position: center;
+   background-size: cover;
+}
+
+.search input {
+   border: none;
+   outline: none;
+   padding-left: 10px;
+
+   width: 160px;
+   box-sizing: border-box;
+}
