@@ -1,0 +1,225 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+      /* 기본 설정 */
+      header,
+      footer {
+         font-family: 'Noto Sans KR', sans-serif;
+      }
+
+      html,
+      body {
+         margin: 0px;
+         padding: 0px;
+         width: 100%;
+         height: 100%;
+      }
+
+      /* 헤더 영역 전체 스타일 */
+      .header_background {
+         width: 100%;
+         height: 123px;
+      }
+
+      header {
+         width: 100%;
+         margin: 0px;
+         padding: 0px;
+         position: fixed;
+         background-color: white;
+         opacity: 0.9;
+         transition: 1.5s;
+         z-index: 1000;
+      }
+
+      header:hover{
+         opacity: 1;
+         transition: 0.5s;
+      }
+
+      .header_wrap {
+         width: 1280px;
+         max-width: 1280px;
+         margin: 0px auto;
+         box-sizing: border-box;
+      }
+
+      .header_top_menu,
+      .header_main,
+      .header_sub_menu_list {
+         list-style: none;
+         padding: 0px;
+         margin: 0px;
+      }
+
+      .header_top_menu a,
+      .header_main_menu a,
+      .header_sub_menu_list a {
+         text-decoration: none;
+         color: black;
+      }
+
+      /* 헤더 상단 메뉴 스타일 */
+      .header_top {
+         padding: 8px 24px;
+      }
+
+      .header_top_menu {
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         font-size: 12px;
+         gap: 16px;
+      }
+
+      .header_top_menu li a {
+         color: #999999;
+      }
+
+      /* 헤더 메인 메뉴 스타일 */
+      .header_main_wrap {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         height: 90px;
+         margin: 0px;
+         /* border: 1px solid black; */
+      }
+
+      .header_main {
+         display: flex;
+         align-items: center;
+         height: 90px;
+         padding: 0px 24px;
+         margin: 0px;
+         gap: 70px;
+         font-size: 17px;
+         font-weight: 500;
+      }
+
+      .header_logo img {
+         max-width: 113px;
+      }
+
+      .header_main_menu {
+         position: relative;
+      }
+
+      .header_main_menu a {
+         font-size: 20px;
+         font-weight: 400;
+         color: #333333;
+         /* 필요 시 패딩이나 마진을 조정하여 텍스트 시작 위치를 맞춥니다 */
+         display: block;
+      }
+
+      /* 공통 서브메뉴 배경 - header_main 영역에 마우스가 올라가면 전체 배경이 보임 */
+      .submenu_background {
+         width: 100%;
+         height: 150px;
+         background-color: #4e5059dd;
+         opacity: 0;
+         transition: 0.5s;
+         pointer-events: none;
+         position: absolute;
+         top: 123px;
+         left: 0px;
+      }
+
+      .header_main:hover .submenu_background {
+         opacity: 1;
+         pointer-events: auto;
+         transition: 0.5s;
+         z-index: 800;
+      }
+
+      /* 서브메뉴 리스트 - 각 메뉴 항목의 하위 메뉴는 메인 메뉴 항목 내부에서 나타남 */
+      .header_sub_menu_list {
+         position: absolute;
+         left: 0px;
+         top: 90px;
+         display: none;
+         transition: 0.5s;
+      }
+
+      /* 서브메뉴 항목 스타일 */
+      .header_sub_menu_list a {
+         font-size: 15px;
+         padding: 4px 0px;
+         box-sizing: border-box;
+         /* 한 라인에 단어가 모두 나오도록 설정 (줄바꿈 없이) */
+         white-space: nowrap;
+      }
+
+      .header_main:hover .header_sub_menu_list {
+         display: block;
+         transition: 0.5s;
+         z-index: 900;
+      }
+
+      .header_sub_menu_list a {
+         color: #ebebeb;
+      }
+
+      .header_top_menu a:hover,
+      .header_main_menu a:hover,
+      .header_sub_menu_list a:hover {
+         color: #f9bb00;
+      }
+
+      .header_main_menu:hover>a {
+         color: #f9bb00;
+      }
+
+
+      /* 푸터 영역 전체 스타일 */
+      footer {
+         width: 100%;
+         height: 334px;
+         background-color: rgb(241, 241, 241);
+      }
+
+
+      .footer-div {
+         display: flex;
+         width: 1280px;
+         max-width: 1280px;
+         height: 100%;
+         background-color: rgb(241, 241, 241);
+         margin: 0px auto;
+         align-items: center;
+         justify-content: space-between;
+      }
+
+      /* footer 왼쪽 정보 영역 */
+      .footer-div-infos {
+         font-size: 13px;
+      }
+
+      .footer-div-infos p {
+         padding-bottom: 30px;
+      }
+
+      /* footer 오른쪽 패밀리사이트 영역 */
+      .footer-right {
+         height: 237px;
+         justify-content: space-between;
+      }
+
+
+      /* 패밀리사이트 내 아이콘 영역 */
+      .footer-sites {
+         display: flex;
+      }
+
+      .footer-familysite p {
+         text-align: end;
+         margin: 13px 0px 40px;
+      }
+
+      .sns img {
+         width: 32px;
+         height: 32px;
+         background-color: white;
+         border-radius: 50%;
+         margin-left: 8px;
+      }

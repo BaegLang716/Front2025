@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>header</title>
+  <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+    /* 기본 설정 */
+    header,
+    footer {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    header {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header_wrap {
+      max-width: 1112px;
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* 헤더 상단 메뉴 스타일 */
+    .header_top {
+      padding: 8px 24px;
+    }
+
+    .header_top_menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 12px;
+      gap: 16px;
+    }
+
+    .header_top_menu li a {
+      color: #999999;
+    }
+
+    /* 헤더 메인 메뉴 스타일 */
+    .header_main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
+      padding: 0 24px;
+      margin: 0;
+      gap: 70px;
+      font-size: 17px;
+      font-weight: 500;
+      /* border: 1px solid black; */
+    }
+
+    .header_logo img {
+      max-width: 113px;
+    }
+
+    .header_main_menu {
+      position: relative;
+    }
+
+    .header_main_menu a {
+      color: #333333;
+      /* 필요 시 패딩이나 마진을 조정하여 텍스트 시작 위치를 맞춥니다 */
+      display: block;
+    }
+
+    /* 공통 서브메뉴 배경 - header_main 영역에 마우스가 올라가면 전체 배경이 보임 */
+    .submenu_background {
+      width: 100%;
+      height: 150px;
+      background-color: #4e5059dd;
+      opacity: 0;
+      transition: opacity 0.5s;
+      pointer-events: none;
+      position: absolute;
+      top: 125px;
+      left: 0;
+    }
+
+    .header_main:hover .submenu_background {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* 서브메뉴 리스트 - 각 메뉴 항목의 하위 메뉴는 메인 메뉴 항목 내부에서 나타남 */
+    .header_sub_menu_list {
+      position: absolute;
+      /* 각 메인 메뉴 항목의 텍스트 시작 위치에 맞추기 위해 left: 0; (필요 시 padding 값과 맞출 수 있음) */
+      left: 0;
+      /* 메인 메뉴 영역의 아래쪽에서 나타나되, 약간의 여백을 두려면 top 값을 조정 */
+      top: 90px;
+      display: none; 
+    }
+
+    .header_main:hover .header_sub_menu_list {
+      display: block;
+    }
+
+    /* 서브메뉴 항목 스타일 */
+    .header_sub_menu_list li {
+      font-size: 15px;
+      margin-bottom: 8px;
+      /* 한 라인에 단어가 모두 나오도록 (줄바꿈 없이) */
+      white-space: nowrap;
+    }
+
+    .header_sub_menu_list a {
+      color: #ebebeb;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header_wrap">
+      <!-- 헤더 상단 메뉴 -->
+      <div class="header_top">
+        <ul class="header_top_menu">
+          <li><a href="">채용안내</a></li>
+          <li><a href="">전자 계약 시스템</a></li>
+        </ul>
+      </div>
+      <!-- 헤더 메인 메뉴 -->
+      <div class="header_main">
+        <div class="submenu_background"></div>
+        <div class="header_logo">
+          <img src="./header&footer_img/emart24_logo.png" alt="이마트24 로고">
+        </div>
+        <ul class="header_main">
+          <li class="header_main_menu">
+            <a href="brand_story.html">이마트24 소개</a>
+            <ul class="header_sub_menu_list">
+              <li><a href="brand_story.html">브랜드 스토리</a></li>
+              <li><a href="brand_resource.html">브랜드 리소스 센터</a></li>
+              <li><a href="brand_gallery.html">브랜드 갤러리</a></li>
+            </ul>
+          </li>
+          <li class="header_main_menu">
+            <a href="goods_event.html">상품</a>
+            <ul class="header_sub_menu_list">
+              <li><a href="goods_event.html">행사 상품</a></li>
+              <li><a href="goods_different.html">차별화 상품</a></li>
+              <li><a href="goods_fresh.html">Fresh Food</a></li>
+            </ul>
+          </li>
+          <li class="header_main_menu">
+            <a href="service_app.html">서비스</a>
+            <ul class="header_sub_menu_list">
+              <li><a href="service_app.html">APP 서비스</a></li>
+              <li><a href="service_life.html">생활 서비스</a></li>
+              <li><a href="service_partner.html">제휴 서비스</a></li>
+            </ul>
+          </li>
+          <li class="header_main_menu">
+            <a href="service_act.html">이벤트</a>
+            <ul class="header_sub_menu_list">
+              <li><a href="event_act.html">진행중인 이벤트</a></li>
+              <li><a href="event_end.html">종료된 이벤트</a></li>
+            </ul>
+          </li>
+          <li class="header_main_menu">
+            <a href="customerCenter.html">고객센터</a>
+            <ul class="header_sub_menu_list">
+              <li><a href="customerCenter.html">고객센터 홈</a></li>
+              <li><a href="customerCenter_faq.html">FAQ</a></li>
+              <li><a href="customerCenter_online.html">온라인 문의</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est corporis deleniti, ipsam sapiente expedita atque reprehenderit a nisi asperiores quisquam aspernatur minima iusto et voluptatum accusantium! Provident id excepturi eius.
+    Expedita id adipisci mollitia, temporibus eos doloribus at quisquam nihil asperiores, explicabo aspernatur eveniet nesciunt quae itaque velit necessitatibus obcaecati qui nam sit magni in! Maiores possimus dolorum asperiores dignissimos.
+    Eligendi saepe pariatur quaerat veritatis quidem enim repellendus, commodi eos in non excepturi quia vel illum iure! Dicta atque saepe magni animi consequatur, ipsa itaque alias esse veniam laudantium iure.
+    Eveniet, dignissimos vero blanditiis, soluta voluptate quis rerum labore suscipit, et expedita dolore maiores cum laudantium ipsa deleniti qui laborum id. Repudiandae dicta, officiis quasi aspernatur nisi quas quod! Minima.
+    Veritatis, rerum voluptatibus animi excepturi repellat reprehenderit impedit nesciunt itaque aliquid dolorem odit consectetur cumque reiciendis eos ipsam maxime ea qui numquam accusantium assumenda odio fuga at quaerat. Nostrum, eum!
+    Corporis ipsum asperiores deleniti alias provident voluptatibus! Eius iste, ducimus ullam, tempore explicabo modi dolorem rem fuga inventore rerum quidem, in quasi! Culpa maiores cupiditate quaerat quisquam, esse odit maxime?
+    Dolore aspernatur quae in aliquam consectetur, saepe aperiam! Eveniet numquam ad officia molestias tempora sit deserunt a, asperiores nesciunt fugit quidem aliquam esse accusantium iste eaque aperiam saepe tempore sunt?
+    Quibusdam, beatae voluptas nisi magni, repellat tempora at harum commodi debitis assumenda et nobis alias, ducimus consequatur ratione voluptatem? Repellat maxime ab recusandae harum enim dolores hic voluptatibus adipisci error!
+    Doloribus a dolores atque ea nostrum. Nostrum voluptate ut optio officia voluptates at similique ex consequuntur odit. Nam iure illum eveniet consectetur alias explicabo, est velit quae consequatur, facere libero.
+    Incidunt quibusdam maxime impedit nesciunt sit laborum, illum et magnam debitis porro, doloribus reprehenderit quasi quaerat officia architecto veritatis repellendus possimus corrupti delectus natus, deleniti tempore. Totam fugiat consequuntur eos?</p>
+  </header>
+</body>
+
+</html>

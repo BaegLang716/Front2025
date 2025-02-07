@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header{
+            height: 150px;
+            background-color: antiquewhite;
+
+            position: fixed;
+            top:0px;
+            left: 0px;
+            width: 100%;
+
+
+        }
+
+
+        .menu{
+            height: 130px;
+        }
+
+        .submenu{
+            height: 50px;
+            background-color: aqua;
+        }
+
+
+        .content{
+            height: 2000px;
+        }
+    </style>
+
+
+  <script>
+     
+
+        window.addEventListener("scroll" , function(){
+            const submenu  = document.querySelector(".submenu");
+            const header  = document.querySelector("header");
+            const scrollY  = window.scrollY;
+
+            if(  scrollY >=30){
+                submenu.style.display="none";
+                header.style.height="150px"
+            }else{
+                submenu.style.display="block";
+                
+            }
+
+        });
+
+   
+  </script>
+</head>
+<body>
+    
+
+    <header>
+        <div> 전체목록 </div>
+        <div class="menu"> 메뉴</div>
+        <div class="submenu"> 서브메뉴</div>
+    </header>
+
+    <div class="content">ddfdfdfd</div>
+</body>
+</html>

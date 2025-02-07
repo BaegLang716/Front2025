@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이마트24 홈페이지</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        header {
+            width: 100%;
+            height: 120px;
+        }
+
+        header img {
+            width: 180px;
+            height: 60px;
+        }
+
+        .header-div {
+            padding-top: 30px;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            position: relative;
+        }
+
+        .header-small {
+            position: absolute;
+            display: flex;
+            gap: 20px;
+            top: 0px;
+            right: 135px;
+            font-size: 13px;
+            color: rgb(106, 106, 107);
+        }
+
+        .header-small div:hover {
+            color: rgb(251, 172, 55);
+        }
+
+        .header-list {
+            display: flex;
+            list-style: none;
+            padding-left: 150px;
+            gap: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 0px;
+            color: rgb(38, 38, 38);
+        }
+
+        .header-list li {
+            width: 200px;
+            position: relative;
+        }
+
+        .header-list a {
+            text-decoration: none;
+            color: rgb(38, 38, 38);
+        }
+
+        .hidden-menu {
+            list-style: none;
+            position: absolute;
+            left: -40px;
+            top: 40px;
+            background-color: rgb(72, 72, 72);
+            width: 100%;
+            padding-left: -20px;
+            padding: 10px 0;
+            border-radius: 5px;
+
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out, visibility 0.7s;
+        }
+
+        .hidden-menu li a{
+            margin: 10px 20px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .hidden-menu li{
+            margin: 10px 20px;
+            font-size: 16px;
+        }
+
+        .hidden-menu li:hover {
+            color: rgb(251, 172, 55);
+        }
+
+        .header-list li:hover .hidden-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .footer-div{
+            display: flex;
+            height: 300px;
+            width: 100%;
+            background-color: rgb(241, 241, 241);
+            justify-content: space-around;
+            padding-top: 80px;
+        }
+
+        .footer-div-infos {
+            font-size: 13px;
+        }
+
+        .footer-div-infos p{
+            padding-bottom: 30px;
+        }
+
+        .footer-familysite {
+            text-align: right;
+        }
+
+        .footer-sites{
+            display: flex;
+            padding-top: 50px;
+        }
+
+        .footer-sites img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .wrap {
+            border: 1px solid black;
+            width: 1100px;
+            margin: 0 auto;
+            background-color: rgb(249,250,251);
+        }
+
+        .box1 h1{
+            font-size: 48px;
+        }
+        .box1 p{
+            font-size: 20px;
+            padding: 10px;
+        }
+        /* customerCenter_searchBar */
+
+        .customerCenter_searchBar {
+            display: flex;
+        }
+
+        .customerCenter_searchBar img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .customerCenter_searchBar input {
+            width: 810px;
+            height: 60px;
+            border-radius: 10px;
+            border: none;
+        }
+        .customerCenter_searchBar input:focus{
+            border: none;
+        }
+
+
+        /* customerCenter_searchBar1 */
+        .customerCenter_searchBar1 {
+            border: none; 
+            margin: 0 auto;
+            display: flex;
+            border-radius: 10px;
+        }
+        .customerCenter_searchBar1:focus {
+            border: 2px solid rgb(249, 187, 0); 
+        }
+        
+
+        
+
+        /* customerCenter_searchBtn */
+        .customerCenter_searchBtn {
+            border: none;
+            width: 160px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: rgb(249, 187, 0);
+        }
+
+        .customerCenter_searchBtn:hover {
+            transform: scale(0.98);
+            transition: 0.25s;
+            color: white;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        ul a, a:link, a:visited, a:active {
+            color: rgb(159,159,159); /* 클릭 후 링크 색상 변경 */
+            text-decoration: none;
+        }
+
+
+        /* box1의 ul */
+        .box1 ul{        
+            width: 100%;
+        
+
+            display: flex;           
+            justify-content: center;
+            /*align-items: center;*/
+            
+        }
+        .box1 li{
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid green;
+        }
+        .box1 li a:hover{
+            color: rgb(51,51,51);
+        }
+
+        /* box2 */
+        .faqTitle{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            position: relative;
+            margin-top: 80px;
+
+        }
+        .faqTitle h1{
+            font-size: 28px;
+            margin: 0 auto;
+
+        }
+        .faqTitle span{
+            font-size: 15px;
+            position: absolute;
+            right: 30px;
+        }
+        .faqTitle img{
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            right: 0px;
+        }
+    </style>
+    <script>
+        function customerCenter_searchBtn() {
+            
+        }
+        /*************************************************나중에 해라*/
+        function showYellow(){
+            document.div.style.border="2px solid rgb(249, 187, 0)";
+        }
+        function showNone(){
+            document.div.style.border="none";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 헤더부분 -->
+    <header>
+        <div class="header-div">
+            <div class="header-small">
+                <div>채용안내</div>
+                <div>전자 계약 시스템</div>
+            </div>
+            <a href="./index.html">
+                <img src="./project_images/emart24logo.png" alt="emart24_logo">
+            </a>
+            <ul class="header-list">
+                <!-- #에 각 메뉴의 제일 상단의 페이지 링크 거시면 됩니다 -->
+                <li><a href="#">이마트24 소개</a>
+                    <ul class="hidden-menu">
+                        <li><a href="">브랜드 스토리</a></li>
+                        <li><a href="">브랜드 리소스</a></li>
+                        <li><a href="">브랜드 갤러리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">상품</a>
+                    <ul class="hidden-menu">
+                        <li><a href="">행사 상품</a></li>
+                        <li><a href="">차별화 상품</a></li>
+                        <li><a href="">Fresh Food</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">서비스</a>
+                    <ul class="hidden-menu">
+                        <li><a href="">APP 서비스</a></li>
+                        <li><a href="">생활 서비스</a></li>
+                        <li><a href="">제휴 서비스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">이벤트</a>
+                    <ul class="hidden-menu">
+                        <li><a href="">진행중인 이벤트</a></li>
+                        <li><a href="">종료된 이벤트</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객센터</a>
+                    <ul class="hidden-menu">
+                        <li><a href="">고객센터 홈</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">온라인 문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 섹션부분 -->
+    <section>
+        <div class="wrap">
+            <div class="box1">
+                <h1>고객센터 홈</h1>
+                <p>고객님의 의견에 대해 귀담아 듣고 정확히 피드백하겠습니다.</p>
+                <div class="customerCenter_searchBar">
+                    <div class="customerCenter_searchBar1">
+                        <img src="https://www.emart24.co.kr/assets/assets/imgs/iconSearch.png" alt="검색아이콘">
+                        <input type="text" onfocus="showYellow()" onblur="showNone()" placeholder="궁금하신 내용을 검색해주세요.">
+                    </div>
+                    <button class="customerCenter_searchBtn" onclick="customerCenter_searchBtn()">검색</button>
+                </div>
+                <ul>
+                    <li><span><a href="#">APP</a></span></li>
+                    <li><span><a href="#">환불</a></span></li>
+                    <li><span><a href="#">택배</a></span></li>
+                    <li><span><a href="#">상품권</a></span></li>
+                    <li><span><a href="#">매장</a></span></li>
+                    <li><span><a href="#">영수증</a></span></li>
+                </ul>
+            </div>
+    
+    
+            <!-- box2 -->
+            <div class="box2">
+                <div class="faqTitle">
+                    <h1>FAQ TOP 5</h1>
+                    <span>전체보기</span>
+                    <img src="https://www.emart24.co.kr/assets/assets/imgs/more.png" alt="">
+                </div>
+    
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터부분분 -->
+    <footer>
+        <div class="footer-div">
+            <div class="footer-div-infos">
+                <p>개인정보 처리방침 &nbsp;|&nbsp; 고정형 영상정보기기 운영 관리 방침 &nbsp;|&nbsp; 위치기반서비스 이용약관 &nbsp;|
+                    <span style="color: rgb(158, 158, 158);">&nbsp;이용약관 &nbsp;| &nbsp;공지사항 &nbsp;| &nbsp;고객센터
+                        &nbsp;|&nbsp; CSR경영 &nbsp;| &nbsp;사이트맵</span>
+                </p>
+                <p>(주) 이마트24</p>
+                <p>대표이사 : 송만춘 / 사업자등록번호: 105-86-92454 <br>
+                    서울특별시 성동구 성수동 2가 281-4 푸조비즈타워 / 고객센터: 02-6916-1500 / Fax: 02-6916-1430 <br>
+                    COPYRIGHT (C) EMART24.ALL RIGHT RESERVED</p>
+            </div>
+            <div class="footer-familysite">
+                <p><span style="color: rgb(158, 158, 158); font-size: 14px;">패밀리사이트 +</span></p>
+                
+                <div class="footer-sites">
+                    <div><img src="./project_images/youtube.jpg" alt=""></div>
+                    <div><img src="./project_images/insta.jpg" alt=""></div>
+                    <div><img src="./project_images/facebook.jpeg" alt=""></div>
+                    <div><img src="./project_images/tiktok.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

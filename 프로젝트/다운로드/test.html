@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move & Rotate</title>
+
+    <style>
+        .a {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .b{
+            height: 1000px;
+        }
+
+        .c{
+            position: absolute;
+            right: 0px;
+            top:0px;
+        }
+    </style>
+
+    <script>
+        function moveRightUp() {
+            const a = document.querySelector(".a");
+            a.style.transform = "rotate(45deg) translate(500px, -150px)"; 
+        }
+
+        function moveDown() {
+            const a = document.querySelector(".a");
+            a.style.transform = "rotate(-45deg) translate(0px, 200px)"; 
+        }
+
+        function moveLeft() {
+            const a = document.querySelector(".a");
+            a.style.transform = "rotate(45deg) translate(-300px, 0px)";
+        }
+
+        function moveUp() {
+            const a = document.querySelector(".a");
+            a.style.transform = "rotate(-45deg) translate(0px, -200px)";
+        }
+    </script>
+</head>
+<body>
+  
+    <div class="b">내용 </div>
+    <div class="a"></div>
+    <div  class="c">
+        <button onclick="moveRightUp()">1  </button>
+        <button onclick="moveDown()">2  </button>
+        <button onclick="moveLeft()">3 </button>
+        <button onclick="moveUp()">4  </button>
+    </div>
+ 
+   
+   
+
+   
+
+</body>
+</html>

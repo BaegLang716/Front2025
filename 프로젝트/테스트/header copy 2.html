@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>header</title>
+  <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+    /* 기본 설정 */
+    header,
+    footer {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    html,
+    body {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header_background {
+      width: 100%;
+      height: 123px;
+    }
+
+    header {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      position: fixed;
+
+      backdrop-filter: blur(6px);
+    }
+
+    .header_wrap {
+      width: 1280px;
+      max-width: 1280px;
+      margin: 0px auto;
+      box-sizing: border-box;
+    }
+
+    .header_top_menu,
+    .header_main,
+    .header_sub_menu_list {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .header_top_menu a,
+    .header_main_menu a,
+    .header_sub_menu_list a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* 헤더 상단 메뉴 스타일 */
+    .header_top {
+      padding: 8px 24px;
+    }
+
+    .header_top_menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 12px;
+      gap: 16px;
+    }
+
+    .header_top_menu li a {
+      color: #999999;
+    }
+
+    /* 헤더 메인 메뉴 스타일 */
+    .header_main_wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
+      margin: 0px;
+      /* border: 1px solid black; */
+    }
+
+    .header_main {
+      display: flex;
+      align-items: center;
+      height: 90px;
+      padding: 0px 24px;
+      margin: 0px;
+      gap: 70px;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .header_logo img {
+      max-width: 113px;
+    }
+
+    .header_main_menu {
+      position: relative;
+    }
+
+    .header_main_menu a {
+      font-size: 20px;
+      font-weight: 400;
+      color: #333333;
+      /* 필요 시 패딩이나 마진을 조정하여 텍스트 시작 위치를 맞춥니다 */
+      display: block;
+    }
+
+    /* 공통 서브메뉴 배경 - header_main 영역에 마우스가 올라가면 전체 배경이 보임 */
+    .submenu_background {
+      width: 100%;
+      height: 150px;
+      background-color: #4e5059dd;
+      opacity: 0;
+      transition: 0.5s;
+      pointer-events: none;
+      position: absolute;
+      top: 123px;
+      left: 0px;
+    }
+
+    .header_main:hover .submenu_background {
+      opacity: 1;
+      pointer-events: auto;
+      transition: 0.5s;
+    }
+
+    /* 서브메뉴 리스트 - 각 메뉴 항목의 하위 메뉴는 메인 메뉴 항목 내부에서 나타남 */
+    .header_sub_menu_list {
+      position: absolute;
+      left: 0px;
+      top: 90px;
+      display: none;
+      transition: 0.5s;
+    }
+
+    /* 서브메뉴 항목 스타일 */
+    .header_sub_menu_list a {
+      font-size: 15px;
+      padding: 4px 0px;
+      box-sizing: border-box;
+      /* 한 라인에 단어가 모두 나오도록 설정 (줄바꿈 없이) */
+      white-space: nowrap;
+    }
+
+    .header_main:hover .header_sub_menu_list {
+      display: block;
+      transition: 0.5s;
+    }
+
+    .header_sub_menu_list a {
+      color: #ebebeb;
+    }
+
+    .header_top_menu a:hover,
+    .header_main_menu a:hover,
+    .header_sub_menu_list a:hover {
+      color: #f9bb00;
+    }
+
+    .header_main_menu:hover>a {
+      color: #f9bb00;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header_background">
+    <header>
+      <div class="header_wrap">
+        <!-- 헤더 상단 메뉴 -->
+        <div class="header_top">
+          <ul class="header_top_menu">
+            <li><a href="">채용안내</a></li>
+            <li><a href="">전자 계약 시스템</a></li>
+          </ul>
+        </div>
+        <!-- 헤더 메인 메뉴 -->
+        <div class="header_main_wrap">
+          <div class="header_logo">
+            <img src="./header&footer_img/emart24_logo.png" alt="이마트24 로고" />
+          </div>
+          <ul class="header_main">
+            <div class="submenu_background"></div>
+            <li class="header_main_menu">
+              <a href="brand_story.html">이마트24 소개</a>
+              <ul class="header_sub_menu_list">
+                <li><a href="brand_story.html">브랜드 스토리</a></li>
+                <li><a href="brand_resource.html">브랜드 리소스 센터</a></li>
+                <li><a href="brand_gallery.html">브랜드 갤러리</a></li>
+              </ul>
+            </li>
+            <li class="header_main_menu">
+              <a href="goods_event.html">상품</a>
+              <ul class="header_sub_menu_list">
+                <li><a href="goods_event.html">행사 상품</a></li>
+                <li><a href="goods_different.html">차별화 상품</a></li>
+                <li><a href="goods_fresh.html">Fresh Food</a></li>
+              </ul>
+            </li>
+            <li class="header_main_menu">
+              <a href="service_app.html">서비스</a>
+              <ul class="header_sub_menu_list">
+                <li><a href="service_app.html">APP 서비스</a></li>
+                <li><a href="service_life.html">생활 서비스</a></li>
+                <li><a href="service_partner.html">제휴 서비스</a></li>
+              </ul>
+            </li>
+            <li class="header_main_menu">
+              <a href="event_act.html">이벤트</a>
+              <ul class="header_sub_menu_list">
+                <li><a href="event_act.html">진행중인 이벤트</a></li>
+                <li><a href="event_end.html">종료된 이벤트</a></li>
+              </ul>
+            </li>
+            <li class="header_main_menu">
+              <a href="customerCenter.html">고객센터</a>
+              <ul class="header_sub_menu_list">
+                <li><a href="customerCenter.html">고객센터 홈</a></li>
+                <li><a href="customerCenter_faq.html">FAQ</a></li>
+                <li><a href="customerCenter_online.html">온라인 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </div>
+</body>
+
+</html>

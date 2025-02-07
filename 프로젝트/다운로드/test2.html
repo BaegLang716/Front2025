@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Scroll & Rotation</title>
+
+    <style>
+        body {
+            height: 10000px; /* 스크롤 테스트를 위해 높이 크게 설정 */
+        }
+
+        .b {
+            height: 1000px;
+        }
+
+        .a {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            transition: transform 1s ease-in-out;
+        }
+
+        /* 버튼을 고정 위치 */
+        .buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+
+    <script>
+        let rotation = 0;
+        let x = 0;
+        let y = 0;
+
+        function m1() {
+            const a = document.querySelector(".a");
+            rotation += 90;
+            x += 300;
+            y -= 200;
+            a.style.transform = `rotate(${rotation}deg) translate(${x}px, ${y}px)`;
+
+            window.scrollBy({ top:  800, behavior: "smooth" }); // 스크롤 위로 크게 증가
+        }
+
+        function m2() {
+            const a = document.querySelector(".a");
+            rotation -= 90;
+            y += 300;
+            a.style.transform = `rotate(${rotation}deg) translate(${x}px, ${y}px)`;
+
+            window.scrollBy({ top: -800, behavior: "smooth" }); // 스크롤 아래로 크게 증가
+        }
+
+        function m3() {
+            const a = document.querySelector(".a");
+            rotation += 90;
+            x -= 300;
+            a.style.transform = `rotate(${rotation}deg) translate(${x}px, ${y}px)`;
+
+            window.scrollBy({ top: 500, behavior: "smooth" }); // 더 큰 이동 추가
+        }
+
+        function m4() {
+            const a = document.querySelector(".a");
+            rotation -= 90;
+            y -= 300;
+            a.style.transform = `rotate(${rotation}deg) translate(${x}px, ${y}px)`;
+
+            window.scrollBy({ top: -800, behavior: "smooth" }); // 스크롤 위로 증가
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="b">dfdf</div>
+    <div class="a"></div>
+
+    <div class="buttons">
+        <button onclick="m1()">1  </button>
+        <button onclick="m2()">2 </button>
+        <button onclick="m3()">3 </button>
+        <button onclick="m4()">4  </button>
+    </div>
+
+</body>
+</html>

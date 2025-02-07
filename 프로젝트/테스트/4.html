@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 애니메이션 효과</title>
+
+    <!-- fullPage.js 스타일 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+
+    <style>
+        /* 기본 스타일 */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            position: relative;
+            text-align: center;
+        }
+        .seed {
+            position: absolute;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="fullpage">
+        <div class="section">
+            <div>첫 번째 화면</div>
+            <img src="seed.png" class="seed" id="seed1">
+        </div>
+        <div class="section">
+            <div>두 번째 화면</div>
+            <img src="seed.png" class="seed" id="seed2">
+        </div>
+        <div class="section">
+            <div>세 번째 화면</div>
+            <img src="seed.png" class="seed" id="seed3">
+        </div>
+    </div>
+
+    <!-- fullPage.js & GSAP 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // fullPage.js 초기화
+            new fullpage("#fullpage", {
+                autoScrolling: true,
+                navigation: true,
+                scrollingSpeed: 700,
+                parallax: true, // 패럴랙스 효과 활성화
+            });
+
+            // GSAP ScrollTrigger 활성화
+            gsap.registerPlugin(ScrollTrigger);
+
+            // 씨앗 애니메이션 (각 섹션마다 적용)
+            gsap.to("#seed1", {
+                x: 100, y: 50,
+                duration: 1.5,
+                scrollTrigger: {
+                    trigger: ".section:nth-child(1)",
+                    start: "top center",
+                    end: "bottom center",
+                    scrub: true,
+                    scroller: "body"
+                }
+            });
+
+            gsap.to("#seed2", {
+                x: -50, y: 100,
+                duration: 1.5,
+                scrollTrigger: {
+                    trigger: ".section:nth-child(2)",
+                    start: "top center",
+                    end: "bottom center",
+                    scrub: true,
+                    scroller: "body"
+                }
+            });
+
+            gsap.to("#seed3", {
+                x: 80, y: -120,
+                duration: 1.5,
+                scrollTrigger: {
+                    trigger: ".section:nth-child(3)",
+                    start: "top center",
+                    end: "bottom center",
+                    scrub: true,
+                    scroller: "body"
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
